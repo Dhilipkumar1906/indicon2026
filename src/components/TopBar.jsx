@@ -1,4 +1,3 @@
-import ieee from "../assets/image/ieee.jpg";
 import madras from "../assets/image/ieee madras.webp";
 import indiaCouncil from "../assets/image/india_council.png";
 import sairam from "../assets/image/sec.png";
