@@ -105,7 +105,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-8">
 
             {navItems.map((item) => (
               <button
@@ -118,6 +118,7 @@ export default function Navbar() {
                   tracking-wide
                   text-white
                   transition-all
+                  whitespace-nowrap
                   duration-300
                   hover:text-[#F4D03F]
                 "
@@ -133,6 +134,7 @@ export default function Navbar() {
             href="#register"
             className={`
               hidden lg:flex
+              ml-6
               items-center
               rounded-full
               bg-[#F4D03F]
@@ -156,7 +158,7 @@ export default function Navbar() {
           </a>
 
           {/* Mobile Menu */}
-          <button className="lg:hidden text-white">
+          <button className="lg:hidden text-white gap-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-7 w-7"
