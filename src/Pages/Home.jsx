@@ -5,7 +5,7 @@ import Tracks from "../components/Tracks";
 import ImportantDates from "../components/ImportantDates";
 import CallForPapers from "../components/CallForPapers";
 import Venue from "../components/Venue";
-import Contact from "../components/Contact";
+import Contact from "../components/contact";
 import Footer from "../components/Footer";
 
 export default function Home() {
