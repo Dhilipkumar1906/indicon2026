@@ -105,7 +105,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
 
             {navItems.map((item) => (
               <button
