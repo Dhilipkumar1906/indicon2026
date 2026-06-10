@@ -7,12 +7,15 @@ import CallForPapers from "../components/CallForPapers";
 import Venue from "../components/Venue";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
       <Hero />
+      <Countdown/>
       <AboutSection/>
       <Tracks />
       <ImportantDates/>

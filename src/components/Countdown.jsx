@@ -28,7 +28,7 @@ export default function Countdown() {
   }, [targetDate]);
 
   return (
-    <div className="mt-10">
+    <div className="mt-32 bg-[#FAF7F2]">
 
       {/* Title */}
       <p
@@ -40,13 +40,14 @@ export default function Countdown() {
         text-sm
         font-semibold
         mb-4
+        text-[#6B0018]
       "
       >
         Conference Begins In
       </p>
 
       {/* Cards */}
-      <div className="flex flex-wrap justify-center gap-5 text-white">
+      <div className="flex flex-wrap justify-center gap-5 text-white ">
 
         {["days", "hours", "minutes", "seconds"].map((unit) => (
           <div
@@ -79,6 +80,11 @@ export default function Countdown() {
 
               transition-all
               duration-500
+              bg-white/80
+backdrop-blur-md
+border border-[#F4D03F]/30
+shadow-[0_8px_25px_rgba(212,175,55,0.15)]
+
             "
           >
             {/* Glow Effect */}
@@ -109,6 +115,7 @@ export default function Countdown() {
 
               bg-clip-text
               text-transparent
+              text-[#6B0018]
             "
             >
               {String(timeLeft[unit] ?? "00").padStart(2, "0")}
@@ -124,6 +131,7 @@ export default function Countdown() {
               tracking-[3px]
               text-white/80
               font-semibold
+              text-[#A67C00]
             "
             >
               {unit}

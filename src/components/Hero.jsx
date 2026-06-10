@@ -1,6 +1,5 @@
 import earth from "../assets/image/earth.jpg";
-import Countdown from "./Countdown";
-
+import LogoStrip from "./LogoStrip";
 
 export default function Hero() {
   return (
@@ -16,15 +15,24 @@ rgba(40,0,10,0.62)
         `,
       }}
     >
-      <div className="max-w-5xl mx-auto text-center px-6 pt-24 ">
-
+      
+      <div className="max-w-5xl mx-auto text-center px-6 pt-30 ">
+<LogoStrip/>
         
+        <div className="mb-7 fade-up mt-3">
+  <p className="text-[#F4D03F] uppercase tracking-[4px] text-sm font-medium">
+    An IEEE India Council Conference
+  </p>
 
-        <h1 className="mt-6 text-5xl md:text-7xl font-bold text-white font-['Playfair_Display'] fade-up">
-          IEEE
-          <span className="block text-[#F4D03F] ">
-            INDICON 2026
-          </span>
+
+  <p className="text-white/80 uppercase tracking-[3px] text-xs">
+    In Association with IEEE Madras Section
+  </p>
+</div>
+        <h1 className="mt-2 text-5xl md:text-7xl font-bold text-white font-['Playfair_Display'] fade-up">
+         <p>IEEE</p> 
+        <span className="text-[#F4D03F] drop-shadow-lg">
+    INDICON 2026</span>
         </h1>
 
         <p className="mt-8 text-lg md:text-2xl text-white/90 leading-relaxed font-['Cinzel']">
@@ -48,10 +56,11 @@ rgba(40,0,10,0.62)
         </div>
 
         <div className="mt-3 flex justify-center animate-fadeInUp">
-          <Countdown />
+          
         </div>
 
       </div>
+\
     </section>
   );
 }

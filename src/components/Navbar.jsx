@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/image/logo.png";
-import mad from "../assets/image/madras.png";
-import indc from "../assets/image/india_council.png";
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +31,7 @@ export default function Navbar() {
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Tracks", id: "tracks" },
+    {name: "Speakers", id: "speakers"},
     { name: "Schedule", id: "dates" },
     { name: "Call For Papers", id: "cfp" },
     { name: "Venue", id: "venue" },
@@ -44,14 +44,14 @@ export default function Navbar() {
         className={`
           mx-auto
           transition-all duration-500
-          ${scrolled ? "max-w-[1300px]" : "max-w-[1500px]"}
+          ${scrolled ? "max-w-[1200px]" : "max-h-[1500px]"}
     px-8 lg:px-15
         `}
       >
         {/* Navbar */}
         <div
           className={`
-            mt-4
+            mt-7
             flex items-center justify-between
             rounded-2xl
             border border-[#F4D03F]/20
@@ -77,34 +77,10 @@ export default function Navbar() {
             />
 
             {/* IEEE Madras */}
-            <img
-              src={mad}
-              alt="IEEE Madras Section"
-              className={`
-                hidden md:block
-                w-auto transition-all duration-500
-                ${
-                  scrolled
-                    ? "opacity-0 w-0 overflow-hidden"
-                    : "opacity-100 h-12"
-                }
-              `}
-            />
+            
 
             {/* IEEE India Council */}
-            <img
-              src={indc}
-              alt="IEEE India Council"
-              className={`
-                hidden md:block
-                w-auto transition-all duration-500
-                ${
-                  scrolled
-                    ? "opacity-0 w-0 overflow-hidden"
-                    : "opacity-100 h-8"
-                }
-              `}
-            />
+            
           </div>
 
           {/* Desktop Navigation */}
