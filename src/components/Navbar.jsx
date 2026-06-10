@@ -43,8 +43,7 @@ export default function Navbar() {
     mx-auto
     transition-all duration-500
     ${scrolled ? "max-w-[1300px]" : "max-w-[1500px]"}
-    px-8 lg:px-15
-  `}>
+px-3 md:px-8 lg:px-15  `}>
 
         <div
           className={`
@@ -62,8 +61,7 @@ export default function Navbar() {
           `}
         >
           {/* Logo Section */}
-          <div className="flex items-center gap-6">
-
+<div className="flex items-center gap-2 md:gap-6">
             {/* INDICON Logo */}
             <img
               src={logo}
@@ -158,26 +156,82 @@ export default function Navbar() {
           </a>
 
           {/* Mobile Menu */}
-          <button className="lg:hidden text-white gap-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+<button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="lg:hidden text-white"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-7 w-7"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d={
+        menuOpen
+          ? "M6 18L18 6M6 6l12 12"
+          : "M4 6h16M4 12h16M4 18h16"
+      }
+    />
+  </svg>
+</button>
 
         </div>
 
       </div>
+      {menuOpen && (
+  <div
+    className="
+      lg:hidden
+      mt-2
+      rounded-2xl
+      bg-[#4A0012]/95
+      backdrop-blur-xl
+      border border-[#F4D03F]/20
+      shadow-2xl
+      overflow-hidden
+    "
+  >
+    {navItems.map((item) => (
+      <button
+        key={item.name}
+        onClick={() => {
+          scrollToSection(item.id);
+          setMenuOpen(false);
+        }}
+        className="
+          block
+          w-full
+          text-left
+          px-6
+          py-4
+          text-white
+          border-b
+          border-white/10
+          hover:text-[#F4D03F]
+        "
+      >
+        {item.name}
+      </button>
+    ))}
+
+    <button
+      className="
+        w-full
+        bg-[#F4D03F]
+        text-[#4A0012]
+        font-semibold
+        py-4
+      "
+    >
+      REGISTER NOW
+    </button>
+  </div>
+)}
     </header>
   );
 }
