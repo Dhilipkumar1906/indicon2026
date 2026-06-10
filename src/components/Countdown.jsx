@@ -34,7 +34,6 @@ export default function Countdown() {
       <p
         className="
         text-center
-        text-[#FFD700]
         uppercase
         tracking-[4px]
         text-sm
@@ -59,11 +58,10 @@ export default function Countdown() {
               w-[125px]
               h-[115px]
 
-              bg-white/10
+             
               backdrop-blur-xl
 
-              border
-              border-[#FFD700]/20
+              
 
               rounded-3xl
 
@@ -81,10 +79,9 @@ export default function Countdown() {
               transition-all
               duration-500
               bg-white/80
-backdrop-blur-md
-border border-[#F4D03F]/30
-shadow-[0_8px_25px_rgba(212,175,55,0.15)]
-
+              backdrop-blur-md
+                border border-[#F4D03F]/30
+              shadow-[0_8px_25px_rgba(212,175,55,0.15)]
             "
           >
             {/* Glow Effect */}
@@ -109,12 +106,9 @@ shadow-[0_8px_25px_rgba(212,175,55,0.15)]
               font-bold
 
               bg-gradient-to-b
-              from-[#FFD700]
-              via-[#FFF3B0]
-              to-[#FFD700]
+              
 
               bg-clip-text
-              text-transparent
               text-[#6B0018]
             "
             >
@@ -129,7 +123,6 @@ shadow-[0_8px_25px_rgba(212,175,55,0.15)]
               text-[11px]
               uppercase
               tracking-[3px]
-              text-white/80
               font-semibold
               text-[#A67C00]
             "
