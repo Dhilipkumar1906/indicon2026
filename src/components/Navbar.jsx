@@ -5,10 +5,11 @@ import logo from "../assets/image/logo.png";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 250);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,6 +27,12 @@ export default function Navbar() {
 
     setMenuOpen(false);
   };
+  const currentY = window.scrollY;
+
+if (Math.abs(currentY - lastScrollY) > 20) {
+  setScrolled(currentY > 350);
+  setLastScrollY(currentY);
+}
 
   const navItems = [
     { name: "Home", id: "home" },
@@ -43,7 +50,7 @@ export default function Navbar() {
       <div
         className={`
           mx-auto
-          transition-all duration-500
+transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
           ${scrolled ? "max-w-[1200px]" : "max-h-[1500px]"}
     px-8 lg:px-15
         `}
@@ -59,8 +66,8 @@ export default function Navbar() {
 
             ${
               scrolled
-                ?"bg-[rgba(109,7,26,0.5)] backdrop-blur-2xl px-8 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
-                : "bg-[#4A0012]/80 backdrop-blur-xl px-8 py-4 shadow-2xl"
+? "bg-[rgba(109,7,26,0.65)] backdrop-blur-xl px-8 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)]"
+: "bg-[#4A0012]/85 backdrop-blur-md px-8 py-4 shadow-2xl"
             }
           `}
         >
@@ -71,9 +78,12 @@ export default function Navbar() {
               src={logo}
               alt="INDICON 2026"
               className={`
-                w-auto transition-all duration-500
-                ${scrolled ? "h-9" : "h-11"}
-              `}
+  w-auto
+  transition-all
+  duration-700
+  ease-[cubic-bezier(0.22,1,0.36,1)]
+  ${scrolled ? "h-9 scale-95" : "h-11 scale-100"}
+`}
             />
 
             {/* IEEE Madras */}

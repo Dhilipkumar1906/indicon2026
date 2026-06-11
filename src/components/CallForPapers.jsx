@@ -1,137 +1,185 @@
+const submissionSteps = [
+  {
+    title: "Prepare Manuscript",
+    desc: "Format your research paper according to the IEEE conference template and ensure all submission requirements are satisfied."
+  },
+  {
+    title: "Access Microsoft CMT",
+    desc: "Create a Microsoft CMT account or sign in using your existing credentials."
+  },
+  {
+    title: "Enter Paper Information",
+    desc: "Provide the paper title, abstract, keywords, author details and other required metadata."
+  },
+  {
+    title: "Upload Manuscript",
+    desc: "Submit the complete paper in PDF format through the conference submission portal."
+  },
+  {
+    title: "Review Submission",
+    desc: "Carefully verify all entered information and uploaded files before proceeding."
+  },
+  {
+    title: "Complete Submission",
+    desc: "Finalize the submission and receive a confirmation acknowledgement from the system."
+  }
+];
+{
+  submissionSteps.map((step, index) => (
+    <div
+      key={index}
+      className="bg-white/10 rounded-2xl p-5 text-center"
+    >
+      <div className="text-2xl font-bold text-[#F4D03F] mb-3">
+        {index + 1}
+      </div>
+
+      <h4 className="font-semibold mb-2">
+        {step.title}
+      </h4>
+
+      <p className="text-sm text-white/80">
+        {step.desc}
+      </p>
+    </div>
+  ))
+}
+
 export default function CallForPapers() {
   return (
     <section
       id="cfp"
-      className="bg-[#FAF7F2] py-28 px-6 scroll-mt-22"
+      className="py-24 px-6 bg-gradient-to-b from-[#faf8f2] to-white"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div
-          className="text-center mb-20"
-          data-aos="fade-up"
-        >
-          
+        <div className="text-center mb-16">
+          <p className="text-[#C89B00] uppercase tracking-[4px] font-semibold">
+            Paper Submission
+          </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#4A0012]">
+          <h2 className="text-5xl font-bold text-[#4A0012] mt-3">
             Call For Papers
           </h2>
 
-          <div className="w-24 h-1 bg-[#FFD700] mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-[#F4D03F] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Topics + Guidelines */}
+        <div className="grid lg:grid-cols-2 gap-10">
 
-          {/* Left Side */}
-          <div data-aos="fade-right">
-
-            <div className="inline-block px-4 py-2 rounded-full bg-[#FFD700]/20 text-[#6D071A] font-semibold mb-6">
-              Paper Submission Open
-            </div>
-
-            <h3 className="text-3xl md:text-4xl font-bold text-[#4A0012] leading-snug">
-              Share Your Research With
-              <span className="block text-[#B8860B] mt-2">
-                IEEE INDICON 2026
-              </span>
-            </h3>
-
-            <p className="mt-8 text-gray-700 text-lg leading-relaxed">
-              IEEE INDICON 2026 invites original and unpublished
-              research papers from academicians, researchers,
-              industry professionals and students.
-            </p>
-
-            <p className="mt-5 text-gray-700 text-lg leading-relaxed">
-              Authors are encouraged to submit high-quality
-              contributions aligned with Artificial Intelligence,
-              6G Communications, Cyber-Physical Systems and
-              Sustainable Electronics.
-            </p>
-
-            {/* Buttons */}
-            <div className="mt-10 flex flex-wrap gap-4">
-
-              <button
-                className="
-                px-8 py-4
-                rounded-full
-                bg-[#B8860B]
-                text-white
-                font-semibold
-                hover:scale-105
-                transition-all
-                duration-300
-                "
-              >
-                Submit Paper
-              </button>
-
-              <button
-                className="
-                px-8 py-4
-                rounded-full
-                border-2
-                border-[#B8860B]
-                text-[#6D071A]
-                font-semibold
-                hover:bg-[#B8860B]
-                hover:text-white
-                transition-all
-                duration-300
-                "
-              >
-                Download CFP
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* Right Side */}
-          <div
-            data-aos="fade-left"
-            className="
-            bg-gradient-to-br
-            from-[#4A0012]
-            to-[#6D071A]
-            rounded-3xl
-            p-10
-            text-white
-            shadow-2xl
-            "
-          >
-
-            <div className="text-6xl mb-6">
-              📄
-            </div>
-
-            <h3 className="text-3xl font-bold mb-8">
+          {/* Topics */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#F4D03F]/20">
+            <h3 className="text-2xl font-bold text-[#4A0012] mb-6">
               Topics of Interest
             </h3>
 
-            <div className="space-y-4">
-
-              <div>✓ Artificial Intelligence & Machine Learning</div>
-
-              <div>✓ 6G Communications & Networking</div>
-
-              <div>✓ Cyber-Physical Systems</div>
-
-              <div>✓ Sustainable Electronics</div>
-
-              <div>✓ Smart Grid & Energy Systems</div>
-
-              <div>✓ IoT & Edge Computing</div>
-
-              <div>✓ Robotics & Automation</div>
-
-              <div>✓ Security & Privacy Technologies</div>
-
-            </div>
-
+            <ul className="space-y-4 text-gray-700">
+              <li>• AI for Net-Zero and Sustainable Engineering</li>
+              <li>• 6G & Sustainable Communication Networks</li>
+              <li>• Cyber-Physical Systems & Smart Infrastructure</li>
+              <li>• Sustainable Electronics & Green Hardware</li>
+              <li>• Secure, Ethical & Responsible Intelligence</li>
+              <li>• Technology for Social Good & Smart Society</li>
+            </ul>
           </div>
 
+          {/* Submission */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#F4D03F]/20">
+            <h3 className="text-2xl font-bold text-[#4A0012] mb-6">
+              Submission Guidelines
+            </h3>
+
+            <ul className="space-y-4 text-gray-700">
+              <li>• Original and unpublished research work only</li>
+              <li>• Manuscript must be in IEEE format</li>
+              <li>• PDF submissions only</li>
+              <li>• English language submissions</li>
+              <li>• All papers undergo peer review</li>
+              <li>• Submit through Microsoft CMT</li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* How To Submit */}
+        <div className="mt-12 bg-[#4A0012] rounded-3xl p-10 text-white">
+
+          <h3 className="text-3xl font-bold mb-8 text-center">
+            How To Submit
+          </h3>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
+
+            {[
+              "Prepare Manuscript Use IEEE conference template.",
+  "Register / Login to Microsoft CMT",
+  "Complete Paper Metadata",
+  "Upload Full Paper (PDF)",
+  "Verify Submission Details",
+  "Complete Submission Submit and get acknowledgement."
+            ].map((step, index) => (
+              <div
+                key={index}
+                className="bg-white/10 rounded-2xl p-5 text-center"
+              >
+                <div className="text-2xl font-bold text-[#F4D03F] mb-2">
+                  {index + 1}
+                </div>
+
+                <p>{step}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap justify-center gap-5 mt-10">
+
+            <a
+  href="/cfp.pdf"
+  download
+  className="
+    bg-[#F4D03F]
+    text-[#4A0012]
+    font-semibold
+    px-8 py-3
+    rounded-full
+    hover:scale-105
+    transition
+    inline-flex
+    items-center
+    gap-2
+  "
+>
+  Download CFP
+</a>
+
+            <button
+              className="
+                border border-[#F4D03F]
+                text-[#F4D03F]
+                px-8 py-3
+                rounded-full
+                hover:bg-[#F4D03F]
+                hover:text-[#4A0012]
+                transition
+              "
+            >
+              Submit via CMT
+            </button>
+
+          </div>
+        </div>
+
+        {/* CMT Acknowledgement */}
+        <div className="mt-10 bg-[#FFF9E8] border border-[#F4D03F]/30 rounded-2xl p-6">
+          <p className="text-[15px] text-gray-700 leading-relaxed font-bold">
+            The Microsoft CMT service was used for managing the peer-reviewing
+            process for this conference. This service was provided for free by
+            Microsoft and they bore all expenses, including costs for Azure
+            cloud services as well as for software development and support.
+          </p>
         </div>
 
       </div>

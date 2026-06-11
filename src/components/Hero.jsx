@@ -4,7 +4,7 @@ import LogoStrip from "./LogoStrip";
 export default function Hero() {
   return (
     <section id="home"
-      className="min-h-screen bg-cover bg-center flex items-center"
+      className="min-h-screen relative bg-cover bg-center flex items-center"
       style={{
         backgroundImage: `
           linear-gradient(
@@ -25,8 +25,8 @@ rgba(40,0,10,0.62)
   </p>
 
 
-  <p className="text-white/80 uppercase tracking-[3px] text-xs">
-    In Association with IEEE Madras Section
+  <p className="text-white/80 uppercase tracking-[3px] text-sm">
+    In Association with IEEE Madras Section presents 23rd Edition of
   </p>
 </div>
         <h1 className="mt-2 text-5xl md:text-7xl font-bold text-white font-['Playfair_Display'] fade-up">
@@ -41,7 +41,7 @@ rgba(40,0,10,0.62)
           for Future-Ready Smart Societies
         </p>
 
-        <div className="mt-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-[#F4D03F]/30 px-6 py-3 rounded-xl text-white">
+        <div className="mt-8 inline-flex items-center gap-3 bg-[#F4D03F]/80 backdrop-blur-md border border-[#F4D03F]/30 px-6 py-3 rounded-xl text-[#4A0012] font-bold">
           📅 18 - 20 December 2026 | Sri Sairam Engineering College, Chennai, India
         </div>
 
