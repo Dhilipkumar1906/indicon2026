@@ -36,3 +36,7 @@ html {
 .fade-up {
   animation: fadeUp 1s ease forwards;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
