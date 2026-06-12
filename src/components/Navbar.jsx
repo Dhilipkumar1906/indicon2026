@@ -5,6 +5,7 @@ import logo from "../assets/image/logo.png";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -118,7 +119,7 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
 
           {/* Desktop Register Button */}
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => setShowPopup(true)}
             className={`
               hidden lg:flex
               ml-6
@@ -219,6 +220,64 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
           </div>
         )}
       </div>
+      {showPopup && (
+  <div
+    className="
+      fixed inset-0 z-[999]
+      flex items-center justify-center
+
+      bg-black/40
+      backdrop-blur-md
+
+      px-4
+    "
+  >
+    <div
+      className="
+        w-full max-w-md
+
+        bg-white
+        rounded-3xl
+
+        p-8
+        text-center
+
+        shadow-2xl
+        animate-[fadeIn_0.3s_ease]
+      "
+    >
+      <div className="text-5xl mb-4"></div>
+
+      <h2 className="text-2xl font-bold text-[#4A0012]">
+        Registration Opens Soon
+      </h2>
+
+      <p className="mt-3 text-gray-600">
+        Registration for IEEE INDICON 2026 will be announced shortly.
+        Stay tuned for updates.
+      </p>
+
+      <button
+        onClick={() => setShowPopup(false)}
+        className="
+          mt-6
+          px-6 py-3
+
+          rounded-full
+
+          bg-[#4A0012]
+          text-white
+
+          hover:bg-[#650021]
+          transition-all
+        "
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
     </header>
+    
   );
 }

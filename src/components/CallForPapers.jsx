@@ -1,3 +1,4 @@
+import { useState } from "react";
 const submissionSteps = [
   {
     title: "Prepare Manuscript",
@@ -46,6 +47,7 @@ const submissionSteps = [
 }
 
 export default function CallForPapers() {
+  const [showCmtPopup, setShowCmtPopup] = useState(false);
   return (
     <section
       id="cfp"
@@ -156,6 +158,7 @@ export default function CallForPapers() {
 </a>
 
             <button
+            onClick={() => setShowCmtPopup(true)}
               className="
                 border border-[#F4D03F]
                 text-[#F4D03F]
@@ -183,6 +186,74 @@ export default function CallForPapers() {
         </div>
 
       </div>
+      {showCmtPopup && (
+  <div
+    onClick={() => setShowCmtPopup(false)}
+    className="
+      fixed inset-0
+      z-[999]
+      flex items-center justify-center
+      bg-black/50
+      backdrop-blur-md
+      px-4
+    "
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="
+        max-w-md
+        w-full
+        bg-white
+        rounded-3xl
+        p-8
+        text-center
+        shadow-2xl
+      "
+    >
+      <div className="text-5xl mb-4">📄</div>
+
+      <h2 className="text-2xl font-bold text-[#4A0012]">
+        Paper Submission Portal
+      </h2>
+
+      <p className="mt-4 text-gray-600 leading-relaxed">
+        Microsoft CMT submission portal will be available shortly.
+      </p>
+
+      <p className="mt-2 text-sm text-gray-500">
+        Authors are encouraged to download the CFP and prepare their manuscripts in advance.
+      </p>
+
+      <div className="flex justify-center gap-3 mt-6">
+        <a
+          href="/cfp.pdf"
+          download
+          className="
+            bg-[#F4D03F]
+            text-[#4A0012]
+            px-5 py-3
+            rounded-full
+            font-semibold
+          "
+        >
+          Download CFP
+        </a>
+
+        <button
+          onClick={() => setShowCmtPopup(false)}
+          className="
+            bg-[#4A0012]
+            text-white
+            px-5 py-3
+            rounded-full
+          "
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
     </section>
   );
 }

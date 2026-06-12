@@ -4,7 +4,7 @@ const dates = [
     title: "Submission Start Date",
   },
   {
-    date: "31 Augest 2026",
+    date: "31 August 2026",
     title: "Submission Deadline",
   },
   {

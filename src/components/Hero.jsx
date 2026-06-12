@@ -1,7 +1,9 @@
+import { useState } from "react";
 import earth from "../assets/image/earth.jpg";
 import LogoStrip from "./LogoStrip";
 
 export default function Hero() {
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <section id="home"
       className="min-h-screen relative bg-cover bg-center flex items-center"
@@ -41,16 +43,21 @@ rgba(40,0,10,0.62)
           for Future-Ready Smart Societies
         </p>
 
-        <div className="mt-8 inline-flex items-center gap-3 bg-[#F4D03F]/80 backdrop-blur-md border border-[#F4D03F]/30 px-6 py-3 rounded-xl text-[#4A0012] font-bold">
+        <div className="mt-8 inline-flex items-center gap-3 bg-[#F4D03F]/80 backdrop-blur-md border border-[#F4D03F]/30 px-6 py-3 rounded-xl text-[#4A0012] font-bold text-[18px]">
           📅 18 - 20 December 2026 | Sri Sairam Engineering College, Chennai, India
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <button className="bg-[#F4D03F] text-[#4A0012] px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
+          <button onClick={() => setShowPopup(true)} className="bg-[#F4D03F] text-[#4A0012] px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
             Register Now
           </button>
 
-          <button className="border border-[#F4D03F] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#F4D03F] hover:text-[#4A0012] transition">
+          <button onClick={() =>
+    document.getElementById("cfp")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  } className="border border-[#F4D03F] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#F4D03F] hover:text-[#4A0012] transition">
             Submit Paper
           </button>
         </div>
@@ -60,6 +67,64 @@ rgba(40,0,10,0.62)
         </div>
 
       </div>
+
+      {showPopup && (
+  <div
+    className="
+      fixed inset-0 z-[999]
+      flex items-center justify-center
+
+      bg-black/40
+      backdrop-blur-md
+
+      px-4
+    "
+  >
+    <div
+      className="
+        w-full max-w-md
+
+        bg-white
+        rounded-3xl
+
+        p-8
+        text-center
+
+        shadow-2xl
+        animate-[fadeIn_0.3s_ease]
+      "
+    >
+      <div className="text-5xl mb-4"></div>
+
+      <h2 className="text-2xl font-bold text-[#4A0012]">
+        Registration Opens Soon
+      </h2>
+
+      <p className="mt-3 text-gray-600">
+        Registration for IEEE INDICON 2026 will be announced shortly.
+        Stay tuned for updates.
+      </p>
+
+      <button
+        onClick={() => setShowPopup(false)}
+        className="
+          mt-6
+          px-6 py-3
+
+          rounded-full
+
+          bg-[#4A0012]
+          text-white
+
+          hover:bg-[#650021]
+          transition-all
+        "
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
 \
     </section>
   );
