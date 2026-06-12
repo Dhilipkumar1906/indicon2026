@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/image/logo.png";
 
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 250);
+      // 50px scroll aana udane navbar change aagum, looks smoother
+      setScrolled(window.scrollY > 50); 
     };
+
+    // First time page load aagumpothum sariyaana state-la iruka ithu help pannum
+    handleScroll(); 
 
     window.addEventListener("scroll", handleScroll);
 
@@ -25,21 +27,14 @@ export default function Navbar() {
       behavior: "smooth",
       block: "start",
     });
-
     setMenuOpen(false);
   };
-  const currentY = window.scrollY;
-
-if (Math.abs(currentY - lastScrollY) > 20) {
-  setScrolled(currentY > 350);
-  setLastScrollY(currentY);
-}
 
   const navItems = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Tracks", id: "tracks" },
-    {name: "Speakers", id: "speakers"},
+    { name: "Speakers", id: "speakers" },
     { name: "Schedule", id: "dates" },
     { name: "Call For Papers", id: "cfp" },
     { name: "Venue", id: "venue" },
@@ -51,9 +46,10 @@ if (Math.abs(currentY - lastScrollY) > 20) {
       <div
         className={`
           mx-auto
-transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+          transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
           ${scrolled ? "max-w-[1200px]" : "max-w-[1500px]"}
-    px-8 lg:px-15
+          /* Changed px-8 to px-4 for mobile to give more space for the red box */
+          px-4 md:px-8 lg:px-12 
         `}
       >
         {/* Navbar */}
@@ -64,34 +60,27 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
             rounded-2xl
             border border-[#F4D03F]/20
             transition-all duration-500
-
             ${
               scrolled
-? "bg-[rgba(109,7,26,0.65)] backdrop-blur-xl px-8 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)]"
-: "bg-[#4A0012]/85 backdrop-blur-md px-4 md:px-8 py-3 md:py-4 shadow-2xl"
+                ? "bg-[rgba(109,7,26,0.65)] backdrop-blur-xl px-4 md:px-8 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)]"
+                : "bg-[#4A0012]/85 backdrop-blur-md px-4 md:px-8 py-3 md:py-4 shadow-2xl"
             }
           `}
         >
           {/* Logos */}
-          <div className="flex items-center gap-2 md:gap-6">
-            {/* INDICON */}
+          <div className="flex items-center gap-2 md:gap-6 flex-shrink min-w-0">
             <img
               src={logo}
               alt="INDICON 2026"
               className={`
-  w-auto
-  transition-all
-  duration-700
-  ease-[cubic-bezier(0.22,1,0.36,1)]
-${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
-`}
+                w-auto
+                object-contain
+                transition-all
+                duration-700
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                ${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
+              `}
             />
-
-            {/* IEEE Madras */}
-            
-
-            {/* IEEE India Council */}
-            
           </div>
 
           {/* Desktop Navigation */}
@@ -134,12 +123,7 @@ ${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
               duration-500
               hover:scale-105
               hover:shadow-xl
-
-              ${
-                scrolled
-                  ? "px-5 py-2"
-                  : "px-6 py-3"
-              }
+              ${scrolled ? "px-5 py-2" : "px-6 py-3"}
             `}
           >
             {scrolled ? "REGISTER" : "REGISTER NOW"}
@@ -147,16 +131,17 @@ ${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
 
           {/* Mobile Menu Button */}
           <button
-            
             onClick={() => setMenuOpen(!menuOpen)}
-className="
-lg:hidden
-text-white
-flex
-items-center
-justify-center
-min-w-[40px]
-"          >
+            className="
+              lg:hidden
+              text-white
+              flex
+              items-center
+              justify-center
+              min-w-[40px]
+              flex-shrink-0 /* Ensures the button never gets squeezed out of shape */
+            "
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-7 w-7"
@@ -227,64 +212,57 @@ min-w-[40px]
           </div>
         )}
       </div>
+
+      {/* Popup */}
       {showPopup && (
-  <div
-    className="
-      fixed inset-0 z-[999]
-      flex items-center justify-center
+        <div
+          className="
+            fixed inset-0 z-[999]
+            flex items-center justify-center
+            bg-black/40
+            backdrop-blur-md
+            px-4
+          "
+        >
+          <div
+            className="
+              w-full max-w-md
+              bg-white
+              rounded-3xl
+              p-8
+              text-center
+              shadow-2xl
+              animate-[fadeIn_0.3s_ease]
+            "
+          >
+            <div className="text-5xl mb-4"></div>
 
-      bg-black/40
-      backdrop-blur-md
+            <h2 className="text-2xl font-bold text-[#4A0012]">
+              Registration Opens Soon
+            </h2>
 
-      px-4
-    "
-  >
-    <div
-      className="
-        w-full max-w-md
+            <p className="mt-3 text-gray-600">
+              Registration for IEEE INDICON 2026 will be announced shortly. Stay
+              tuned for updates.
+            </p>
 
-        bg-white
-        rounded-3xl
-
-        p-8
-        text-center
-
-        shadow-2xl
-        animate-[fadeIn_0.3s_ease]
-      "
-    >
-      <div className="text-5xl mb-4"></div>
-
-      <h2 className="text-2xl font-bold text-[#4A0012]">
-        Registration Opens Soon
-      </h2>
-
-      <p className="mt-3 text-gray-600">
-        Registration for IEEE INDICON 2026 will be announced shortly.
-        Stay tuned for updates.
-      </p>
-
-      <button
-        onClick={() => setShowPopup(false)}
-        className="
-          mt-6
-          px-6 py-3
-
-          rounded-full
-
-          bg-[#4A0012]
-          text-white
-
-          hover:bg-[#650021]
-          transition-all
-        "
-      >
-        Close
-      </button>
-    </div>
-  </div>
-)}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="
+                mt-6
+                px-6 py-3
+                rounded-full
+                bg-[#4A0012]
+                text-white
+                hover:bg-[#650021]
+                transition-all
+              "
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </header>
-    
   );
 }
