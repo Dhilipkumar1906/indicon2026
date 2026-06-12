@@ -52,14 +52,14 @@ if (Math.abs(currentY - lastScrollY) > 20) {
         className={`
           mx-auto
 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-          ${scrolled ? "max-w-[1200px]" : "max-h-[1500px]"}
+          ${scrolled ? "max-w-[1200px]" : "max-w-[1500px]"}
     px-8 lg:px-15
         `}
       >
         {/* Navbar */}
         <div
           className={`
-            mt-7
+            mt-3 md:mt-7
             flex items-center justify-between
             rounded-2xl
             border border-[#F4D03F]/20
@@ -68,7 +68,7 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
             ${
               scrolled
 ? "bg-[rgba(109,7,26,0.65)] backdrop-blur-xl px-8 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)]"
-: "bg-[#4A0012]/85 backdrop-blur-md px-8 py-4 shadow-2xl"
+: "bg-[#4A0012]/85 backdrop-blur-md px-4 md:px-8 py-3 md:py-4 shadow-2xl"
             }
           `}
         >
@@ -83,7 +83,7 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
   transition-all
   duration-700
   ease-[cubic-bezier(0.22,1,0.36,1)]
-  ${scrolled ? "h-9 scale-95" : "h-11 scale-100"}
+${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
 `}
             />
 
@@ -149,8 +149,14 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
           <button
             
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden text-white"
-          >
+className="
+lg:hidden
+text-white
+flex
+items-center
+justify-center
+min-w-[40px]
+"          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-7 w-7"
