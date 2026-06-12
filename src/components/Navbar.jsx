@@ -147,6 +147,7 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
 
           {/* Mobile Menu Button */}
           <button
+            
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden text-white"
           >
@@ -206,7 +207,7 @@ transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
             ))}
 
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => setShowPopup(true)}
               className="
                 w-full
                 bg-[#F4D03F]

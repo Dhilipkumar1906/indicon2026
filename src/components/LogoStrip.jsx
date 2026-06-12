@@ -4,19 +4,19 @@ import sairam from "../assets/image/secc.png";
 
 export default function LogoStrip() {
   return (
-    <div className="w-full px-4 mt-28">
+     <div className="w-full px-4 mt-24 md:mt-28">
       <div
         className="
-          max-w-[700px]
+          max-w-[650px]
           mx-auto
 
-          bg-[rgba(250,244,225,0.68)]
+          bg-[rgba(250,244,225,0.72)]
           backdrop-blur-xl
 
           border border-[#D4AF37]/30
-          rounded-xl
+          rounded-2xl
 
-          px-4 md:px-6
+          px-3 md:px-6
           py-3
 
           shadow-[0_8px_30px_rgba(212,175,55,0.15)]
@@ -25,20 +25,19 @@ export default function LogoStrip() {
         <div
           className="
             flex
-            flex-wrap
+            flex-nowrap
             items-center
             justify-center
 
-            gap-9 md:gap-14
+            gap-3 md:gap-8
           "
         >
           <img
             src={indc}
             alt="IEEE India Council"
             className="
-              h-6
-              sm:h-9
-              md:h-8
+              h-7
+              md:h-10
               object-contain
             "
           />
@@ -48,7 +47,6 @@ export default function LogoStrip() {
             alt="IEEE Madras Section"
             className="
               h-7
-              sm:h-8
               md:h-10
               object-contain
             "
@@ -58,14 +56,14 @@ export default function LogoStrip() {
             src={sairam}
             alt="Sri Sairam Engineering College"
             className="
-              h-10
-              sm:h-12
-              md:h-14
+              h-8
+              md:h-12
               object-contain
             "
           />
         </div>
       </div>
     </div>
+
   );
 }
