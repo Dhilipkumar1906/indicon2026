@@ -430,7 +430,7 @@ const [agreed, setAgreed] = useState(false);
 </li>
             <li>• Length of manuscript should be maximum 6 pages
 </li>
-            <li>• Format and verify your manuscript using IEEE PDF eXpress™ to generate IEEE Xplore®-compliant PDF. RESOURCES IEEE PDF eXpress: A freely available online tool designed to assist conference organizers and authors in complying with the IEEE PDF requirements <a href="https://www.ieee.org/conferences/publishing/templates.html" className="text-blue-600 underline hover:text-blue-800">https://www.ieee.org/conferences/publishing/pdfexpress.html</a>  (In case, you need conference id to use PDFXpress, please use this – #68490)
+            <li>• Format and verify your manuscript using IEEE PDF eXpress™ to generate IEEE Xplore®-compliant PDF. RESOURCES IEEE PDF eXpress: A freely available online tool designed to assist conference organizers and authors in complying with the IEEE PDF requirements <a href="https://www.ieee.org/conferences/publishing/templates.html" className="text-blue-600 underline hover:text-blue-800">https://www.ieee.org/conferences/publishing/pdfexpress.html</a>  (In case, you need conference id to use PDFXpress, please use this – #72446)
 </li>
             
             <li>• Get and upload your IEEE Electronic Copyright Form (eCF) to CMT.

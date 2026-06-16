@@ -27,6 +27,9 @@ export default function AboutSection() {
 
             <div className="inline-block px-4 py-2 rounded-full bg-[#FFD700]/20 text-[#6D071A] font-semibold mb-6">
               Theme
+            </div>  <br />
+            <div className="inline-block px-6 py-2 rounded-full bg-[#FFD700]/20 text-[#6D071A] font-semibold mb-6">
+              IEEE Conference Record Number: #72446
             </div>
 
             <h3 className="text-3xl md:text-4xl font-bold text-[#6D071A] leading-snug">
