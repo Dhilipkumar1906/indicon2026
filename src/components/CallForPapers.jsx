@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CallForPapers() {
   const [showCmtPopup, setShowCmtPopup] = useState(false);
+  const navigate = useNavigate();
 
   // Intersection Observer to trigger animations on scroll
   useEffect(() => {
@@ -171,7 +173,9 @@ export default function CallForPapers() {
             </a>
 
             <button
-              onClick={() => setShowCmtPopup(true)}
+                onClick={() => {
+  window.location.href = "/guidelines#dates";
+}}
               className="
                 border border-[#F4D03F]
                 text-[#F4D03F]

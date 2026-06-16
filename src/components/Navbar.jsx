@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/image/logo.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+
+  // Router hooks
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      // 50px scroll aana udane navbar change aagum, looks smoother
-      setScrolled(window.scrollY > 50); 
+      setScrolled(window.scrollY > 50);
     };
 
-    // First time page load aagumpothum sariyaana state-la iruka ithu help pannum
-    handleScroll(); 
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -22,23 +23,36 @@ export default function Navbar() {
     };
   }, []);
 
+  // Handle cross-page scrolling
   const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
     setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100); 
+    } else {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   const navItems = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Tracks", id: "tracks" },
-    { name: "Speakers", id: "speakers" },
-    { name: "Schedule", id: "dates" },
-    { name: "Call For Papers", id: "cfp" },
-    { name: "Venue", id: "venue" },
-    { name: "Contact", id: "contact" },
+    { name: "Home", id: "home", isPage: false },
+    { name: "About", id: "about", isPage: false },
+    { name: "Tracks", id: "tracks", isPage: false },
+    { name: "Speakers", id: "speakers", isPage: false },
+    { name: "Schedule", id: "dates", isPage: false },
+    { name: "Call For Papers", id: "cfp", isPage: false },
+    { name: "Guidelines & Policies", id: "guidelines", isPage: true },
+    { name: "Venue", id: "venue", isPage: false },
+    { name: "Contact", id: "contact", isPage: false },
   ];
 
   return (
@@ -47,8 +61,8 @@ export default function Navbar() {
         className={`
           mx-auto
           transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-          ${scrolled ? "max-w-[1200px]" : "max-w-[1500px]"}
-          /* Changed px-8 to px-4 for mobile to give more space for the red box */
+          /* Changed 1200px to 1280px so it has more breathing room when shrunk */
+          ${scrolled ? "max-w-[1280px]" : "max-w-[1500px]"}
           px-4 md:px-8 lg:px-12 
         `}
       >
@@ -68,50 +82,77 @@ export default function Navbar() {
           `}
         >
           {/* Logos */}
-          <div className="flex items-center gap-2 md:gap-6 flex-shrink min-w-0">
-            <img
-              src={logo}
-              alt="INDICON 2026"
-              className={`
-                w-auto
-                object-contain
-                transition-all
-                duration-700
-                ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
-              `}
-            />
+          <div className="flex items-center gap-2 md:gap-4 xl:gap-6 flex-shrink min-w-0 pr-2">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              <img
+                src={logo}
+                alt="INDICON 2026"
+                className={`
+                  w-auto
+                  object-contain
+                  transition-all
+                  duration-700
+                  ease-[cubic-bezier(0.22,1,0.36,1)]
+                  ${scrolled ? "h-8 md:h-9" : "h-10 md:h-11"}
+                `}
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className="
-                  relative
-                  text-[15px]
-                  font-medium
-                  tracking-wide
-                  whitespace-nowrap
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:text-[#F4D03F]
-                "
-              >
-                {item.name}
-              </button>
-            ))}
+          {/* Made gap dynamic: gap-4 on smaller desktops, gap-6 on larger monitors */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+            {navItems.map((item) =>
+              item.isPage ? (
+                <Link
+                  key={item.name}
+                  to={`/${item.id}`}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="
+                    relative
+                    text-[14px] xl:text-[15px]
+                    font-medium
+                    tracking-wide
+                    whitespace-nowrap
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:text-[#F4D03F]
+                  "
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.id)}
+                  className="
+                    relative
+                    text-[14px] xl:text-[15px]
+                    font-medium
+                    tracking-wide
+                    whitespace-nowrap
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:text-[#F4D03F]
+                  "
+                >
+                  {item.name}
+                </button>
+              )
+            )}
           </nav>
 
           {/* Desktop Register Button */}
           <button
-            onClick={() => setShowPopup(true)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate("/registration");
+            }}
             className={`
               hidden lg:flex
-              ml-6
+              ml-4 xl:ml-6
               items-center
               rounded-full
               bg-[#F4D03F]
@@ -123,6 +164,7 @@ export default function Navbar() {
               duration-500
               hover:scale-105
               hover:shadow-xl
+              flex-shrink-0
               ${scrolled ? "px-5 py-2" : "px-6 py-3"}
             `}
           >
@@ -139,7 +181,7 @@ export default function Navbar() {
               items-center
               justify-center
               min-w-[40px]
-              flex-shrink-0 /* Ensures the button never gets squeezed out of shape */
+              flex-shrink-0
             "
           >
             <svg
@@ -177,28 +219,56 @@ export default function Navbar() {
               overflow-hidden
             "
           >
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className="
-                  block
-                  w-full
-                  text-left
-                  px-6
-                  py-4
-                  text-white
-                  border-b
-                  border-white/10
-                  hover:text-[#F4D03F]
-                "
-              >
-                {item.name}
-              </button>
-            ))}
+            {navItems.map((item) =>
+              item.isPage ? (
+                <Link
+                  key={item.name}
+                  to={`/${item.id}`}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    window.scrollTo(0, 0); 
+                  }}
+                  className="
+                    block
+                    w-full
+                    text-left
+                    px-6
+                    py-4
+                    text-white
+                    border-b
+                    border-white/10
+                    hover:text-[#F4D03F]
+                  "
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.id)}
+                  className="
+                    block
+                    w-full
+                    text-left
+                    px-6
+                    py-4
+                    text-white
+                    border-b
+                    border-white/10
+                    hover:text-[#F4D03F]
+                  "
+                >
+                  {item.name}
+                </button>
+              )
+            )}
 
             <button
-              onClick={() => setShowPopup(true)}
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo(0, 0);
+                navigate("/registration");
+              }}
               className="
                 w-full
                 bg-[#F4D03F]
@@ -212,57 +282,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-
-      {/* Popup */}
-      {showPopup && (
-        <div
-          className="
-            fixed inset-0 z-[999]
-            flex items-center justify-center
-            bg-black/40
-            backdrop-blur-md
-            px-4
-          "
-        >
-          <div
-            className="
-              w-full max-w-md
-              bg-white
-              rounded-3xl
-              p-8
-              text-center
-              shadow-2xl
-              animate-[fadeIn_0.3s_ease]
-            "
-          >
-            <div className="text-5xl mb-4"></div>
-
-            <h2 className="text-2xl font-bold text-[#4A0012]">
-              Registration Opens Soon
-            </h2>
-
-            <p className="mt-3 text-gray-600">
-              Registration for IEEE INDICON 2026 will be announced shortly. Stay
-              tuned for updates.
-            </p>
-
-            <button
-              onClick={() => setShowPopup(false)}
-              className="
-                mt-6
-                px-6 py-3
-                rounded-full
-                bg-[#4A0012]
-                text-white
-                hover:bg-[#650021]
-                transition-all
-              "
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
