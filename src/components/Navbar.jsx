@@ -43,6 +43,7 @@ export default function Navbar() {
     }
   };
 
+  // Added 'Committee' to the navigation items
   const navItems = [
     { name: "Home", id: "home", isPage: false },
     { name: "About", id: "about", isPage: false },
@@ -51,6 +52,8 @@ export default function Navbar() {
     { name: "Schedule", id: "dates", isPage: false },
     { name: "Call For Papers", id: "cfp", isPage: false },
     { name: "Guidelines & Policies", id: "guidelines", isPage: true },
+        { name: "Committee", id: "committee", isPage: true }, // Put committee here
+
     { name: "Venue", id: "venue", isPage: false },
     { name: "Contact", id: "contact", isPage: false },
   ];
@@ -61,7 +64,6 @@ export default function Navbar() {
         className={`
           mx-auto
           transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-          /* Changed 1200px to 1280px so it has more breathing room when shrunk */
           ${scrolled ? "max-w-[1280px]" : "max-w-[1500px]"}
           px-4 md:px-8 lg:px-12 
         `}
@@ -100,8 +102,8 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          {/* Made gap dynamic: gap-4 on smaller desktops, gap-6 on larger monitors */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+          {/* Adjusted gap and text sizes so 10 items fit perfectly on laptop screens */}
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
             {navItems.map((item) =>
               item.isPage ? (
                 <Link
@@ -110,7 +112,7 @@ export default function Navbar() {
                   onClick={() => window.scrollTo(0, 0)}
                   className="
                     relative
-                    text-[14px] xl:text-[15px]
+                    text-[13px] xl:text-[14px] 2xl:text-[15px]
                     font-medium
                     tracking-wide
                     whitespace-nowrap
@@ -128,7 +130,7 @@ export default function Navbar() {
                   onClick={() => scrollToSection(item.id)}
                   className="
                     relative
-                    text-[14px] xl:text-[15px]
+                    text-[13px] xl:text-[14px] 2xl:text-[15px]
                     font-medium
                     tracking-wide
                     whitespace-nowrap
@@ -152,11 +154,11 @@ export default function Navbar() {
             }}
             className={`
               hidden lg:flex
-              ml-4 xl:ml-6
+              ml-3 xl:ml-5
               items-center
               rounded-full
               bg-[#F4D03F]
-              text-sm
+              text-[13px] xl:text-sm
               font-semibold
               tracking-wider
               text-[#4A0012]
@@ -165,7 +167,7 @@ export default function Navbar() {
               hover:scale-105
               hover:shadow-xl
               flex-shrink-0
-              ${scrolled ? "px-5 py-2" : "px-6 py-3"}
+              ${scrolled ? "px-4 py-2" : "px-5 py-2.5 xl:py-3"}
             `}
           >
             {scrolled ? "REGISTER" : "REGISTER NOW"}

@@ -199,7 +199,7 @@ export default function CallForPapers() {
           {/* Buttons */}
           <div className="flex flex-wrap justify-center gap-5 mt-12 relative z-10">
             <a
-              href="/cfp.pdf"
+              href="/call for papers.pdf"
               download
               className="
                 bg-[#F4D03F] text-[#4A0012] font-bold px-8 py-4 rounded-full

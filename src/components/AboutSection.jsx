@@ -9,8 +9,6 @@ export default function AboutSection() {
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
 
-          
-
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#4A0012]">
             IEEE INDICON 2026
           </h2>
@@ -39,7 +37,8 @@ export default function AboutSection() {
               </span>
             </h3>
 
-            <p className="mt-8 text-gray-700 text-lg leading-relaxed">
+            {/* Added text-justify here */}
+            <p className="mt-8 text-gray-700 text-lg leading-relaxed text-justify">
               IEEE INDICON 2026, the flagship international conference
               of the IEEE India Council, brings together researchers,
               academicians, industry experts and innovators to explore
@@ -48,7 +47,8 @@ export default function AboutSection() {
               Electronics.
             </p>
 
-            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+            {/* Added text-justify here */}
+            <p className="mt-6 text-gray-700 text-lg leading-relaxed text-justify">
               The conference focuses on building future-ready smart
               societies through secure, connected and environmentally
               responsible technologies aligned with global Net-Zero
@@ -61,19 +61,17 @@ export default function AboutSection() {
           <div className="grid sm:grid-cols-2 gap-6"   data-aos="fade-left">
 
             <div className="
-bg-white
-rounded-2xl
-p-8
-shadow-lg
-border
-border-[#FFD700]/20
-
-hover:-translate-y-4
-hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]
-
-transition-all
-duration-500
-">
+              bg-white
+              rounded-2xl
+              p-8
+              shadow-lg
+              border
+              border-[#FFD700]/20
+              hover:-translate-y-4
+              hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]
+              transition-all
+              duration-500
+            ">
               <div className="text-4xl mb-4">🌍</div>
 
               <h4 className="text-xl font-bold text-[#6D071A]">

@@ -8,6 +8,7 @@ import TopBar from "./components/TopBar.jsx";
 import About from "./components/AboutSection.jsx"; // Capitalized 'About' for React standards
 import Guidelines from "./Pages/Guidelines.jsx";
 import Registration from "./Pages/Registrations.jsx";
+import Committee from "./Pages/Committee.jsx";
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
           <Route path="/guidelines" element={<Guidelines />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/about" element={<About />} /> {/* Capitalized <About /> */}
+          <Route path="/committee" element={<Committee />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
