@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer.jsx"; // Footer import பண்ணிருக்கோம்
+import Footer from "../components/Footer";
 
 export default function CallForPapers() {
   const [showCmtPopup, setShowCmtPopup] = useState(false);
