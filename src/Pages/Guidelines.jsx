@@ -150,6 +150,7 @@ const [agreed, setAgreed] = useState(false);
 
         </div>
         
+        
 
   <div className="flex justify-center gap-4 mt-12 mb-12">
 
@@ -234,13 +235,29 @@ const [agreed, setAgreed] = useState(false);
                 </li>
 
                 <li>
-                  • This service is provided free of charge by Microsoft, which bears all associated expenses, including Azure cloud services and software development and support.
+                  • The Microsoft CMT service was used for managing the peer-reviewing
+              process for this conference. This service was provided for free by
+              Microsoft and they bore all expenses, including costs for Azure
+              cloud services as well as for software development and support.
                 </li>
               </ul>
             </div>
 
           </div>
         </motion.div>
+
+        <div 
+            className="mt-10 bg-[#FFF9E8] border border-[#F4D03F]/30 rounded-2xl p-6 transform transition-all duration-300 hover:shadow-md hover:border-[#F4D03F]/50 reveal-on-scroll flex justify-center gap-4 mt-12 mb-12"
+            style={{ animationDelay: '0.5s' }}
+          >
+            <p className="text-[15px] text-gray-700 leading-relaxed font-bold text-center md:text-left">
+              The Microsoft CMT service was used for managing the peer-reviewing
+              process for this conference. This service was provided for free by
+              Microsoft and they bore all expenses, including costs for Azure
+              cloud services as well as for software development and support.
+            </p>
+          </div>
+          
                 {/* Manuscript Guidelines */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
