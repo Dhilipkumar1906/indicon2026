@@ -13,7 +13,7 @@ export default function Committee() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  // Structured Data from Excel with Image paths
+  // Structured Data from Excel with Image paths and Separated Tracks
   const committeeData = [
     {
       sectionName: "The Core Steering & Advisory Committees",
@@ -37,7 +37,7 @@ export default function Committee() {
         { name: "Dr. J. Raja", role: "Principal-Sri Sai Ram Engineering College", image: "/committee/11.jpg" },
         { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-IITKGP", image: "/committee/12.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl lg:mx-auto",
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl mx-auto",
     },
     {
       sectionName: "Conference Chair",
@@ -49,13 +49,12 @@ export default function Committee() {
     {
       sectionName: "Technical Program Committee (TPC) Chair(s)",
       members: [
-        { name: "Dr. Mohit Tahilani", role: "Associate Professor, NITK, Surathkal", image: "/committee/14.jpg" },
+        { name: "Dr. K. Palanikumar", role: "Principal-Sri Sairam Institute of Technology", image: "/committee/18.jpg" },
         { name: "Dr. S. Radha", role: "Secretary-IEEE Madras Section", image: "/committee/015.jpg" },
         { name: "Dr. T. Shanmuganantham", role: "Professor/Electronics-Pondicherry Central University", image: "/committee/16.jpg" },
         { name: "Dr. Nandhan", role: "Secretary-India Council", image: "/committee/17.jpg" },
-        { name: "Dr. K. Palanikumar", role: "Principal-Sri Sairam Institute of Technology", image: "/committee/18.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
+      colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
     },
     {
       sectionName: "Publication Chair(s)",
@@ -65,27 +64,55 @@ export default function Committee() {
       ],
       colSpan: "sm:grid-cols-2 max-w-2xl mx-auto",
     },
+
+    // --- SEPARATED TRACK CHAIRS ---
     {
-      sectionName: "Track & Session Chairs",
+      sectionName: "WIE Track Chair(s)",
       members: [
-        { name: "Dr. Rajashree Jain", role: "WIE Track Chair | Treasurer-IEEE India Council", image: "/committee/21.jpg" },
-        { name: "Dr. Aswini Appaji", role: "WIE Track Chair | Chair-WIE India Council", image: "/committee/22.jpg" },
-        { name: "Dr. Somaprathiba", role: "WIE Track Chair | Chair-WIE Madras Section", image: "/committee/23.jpg" },
-        { name: "Dr. M. Arun", role: "YP Track Chair | VC-YP India Council & R10", image: "/committee/24.jpg" },
-        { name: "Mr. R. Sreekanth", role: "YP Track Chair | Vice-Chairman – SDG MAS", image: "/committee/25.jpg" },
-        { name: "Dr. Anuradha", role: "SAC Track Chair | VC-SAC India Council", image: "/committee/26.jpg" },
-        { name: "Dr. Abhishek Appaji", role: "SAC Track Chair | Member-SAC India Council", image: "/committee/27.png" },
-        { name: "Dr. S. Koteeswaran", role: "SAC Track Chair | R&D Head-RMK Engineering College", image: "/committee/28.jpg" },
-        { name: "Dr. M. Venkateshkumar", role: "Paper Presentation | Professor/EEE-Amirta Univ", image: "/committee/29.jpg" },
-        { name: "Dr. S. Arumugaperumal", role: "Paper Presentation | VC-Professional Activities MAS", image: "/committee/30.jpg" },
-        { name: "Dr. K. Vijayakumar", role: "Paper Presentation | Professor/IT- St.Joseph IT", image: "/committee/031.jpg" },
-        { name: "Dr. Venkateswaran", role: "Paper Presentation | Professor/ECE-SSNCE", image: "/committee/32.jpg" },
-        { name: "Dr. T. Sree Sharmila", role: "Special Sessions | Professor/IT-Anna Univ", image: "/committee/33.jpg" },
-        { name: "Dr. J. Arputha Vijayaselvi Jan", role: "Special Sessions | Principal-Kings Engg College", image: "/committee/34.jpg" },
-        { name: "Dr. Ramalatha Marimuthu", role: "Special Sessions | Vice-Chairman – Industry MAS", image: "/committee/35.jpg" },
+        { name: "Dr. Rajashree Jain", role: "Treasurer-IEEE India Council", image: "/committee/21.jpg" },
+        { name: "Dr. Aswini Appaji", role: "Chair-WIE India Council", image: "/committee/22.jpg" },
+        { name: "Dr. Somaprathiba", role: "Chair-WIE Madras Section", image: "/committee/23.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
     },
+    {
+      sectionName: "SAC Track Chair(s)",
+      members: [
+        { name: "Dr. Anuradha", role: "VC-SAC India Council", image: "/committee/26.jpg" },
+        { name: "Dr. Abhishek Appaji", role: "Member-SAC India Council", image: "/committee/27.png" },
+        { name: "Dr. S. Koteeswaran", role: "R&D Head-RMK Engineering College", image: "/committee/28.jpg" },
+      ],
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
+    },
+    {
+      sectionName: "YP Track Chair(s)",
+      members: [
+        { name: "Dr. M. Arun", role: "VC-YP India Council & R10", image: "/committee/24.jpg" },
+        { name: "Mr. R. Sreekanth", role: "Vice-Chairman – SDG MAS", image: "/committee/rs.webp" },
+      ],
+      colSpan: "sm:grid-cols-2 max-w-2xl mx-auto",
+    },
+    {
+      sectionName: "Paper Presentation Chair(s)",
+      members: [
+        { name: "Dr. M. Venkateshkumar", role: "Professor/EEE-Amirta Univ", image: "/committee/29.jpg" },
+        { name: "Dr. S. Arumugaperumal", role: "VC-Professional Activities MAS", image: "/committee/30.jpg" },
+        { name: "Dr. K. Vijayakumar", role: "Professor/IT- St.Joseph IT", image: "/committee/031.jpg" },
+        { name: "Dr. Venkateswaran", role: "Professor/ECE-SSNCE", image: "/committee/32.jpg" },
+      ],
+      colSpan: "sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto",
+    },
+    {
+      sectionName: "Special Sessions / Tutorial Chairs",
+      members: [
+        { name: "Dr. T. Sree Sharmila", role: "Professor/IT-Anna Univ", image: "/committee/33.jpg" },
+        { name: "Dr. J. Arputha Vijayaselvi Jan", role: "Principal-Kings Engg College", image: "/committee/34.jpg" },
+        { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman – Industry MAS", image: "/committee/35.jpg" },
+      ],
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
+    },
+    // ------------------------------
+
     {
       sectionName: "Keynote & Plenary Chairs",
       members: [
@@ -125,7 +152,7 @@ export default function Committee() {
             className="text-center mb-20"
           >
             <p className="text-[#C89B00] uppercase tracking-[4px] font-semibold mt-8">
-              IEEE INDICON 2026
+              Leadership Team
             </p>
             <h1 className="text-5xl md:text-6xl font-bold text-[#4A0012] mt-3">
               Organizing Committee
@@ -157,7 +184,7 @@ export default function Committee() {
                 {/* Conditional Rendering: Check if it's Operations & Logistics */}
                 {section.sectionName === "Operations & Logistics Committees" ? (
                   
-                  // Text-only Layout for Operations & Logistics
+                  // Text-only Layout for Operations & Logistics (Centered perfectly)
                   <div className={`grid gap-6 ${section.colSpan}`}>
                     {section.members.map((member, idx) => (
                       <motion.div 
@@ -166,6 +193,7 @@ export default function Committee() {
                         className="
                           bg-[#FFF9E8] border border-[#F4D03F]/50 rounded-2xl p-8 
                           text-center shadow-sm hover:shadow-md transition-shadow duration-300
+                          mx-auto w-full
                         "
                       >
                         <h3 className="text-2xl md:text-3xl font-bold text-[#4A0012] mb-3">

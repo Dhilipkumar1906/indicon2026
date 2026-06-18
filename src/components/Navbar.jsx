@@ -50,7 +50,7 @@ export default function Navbar() {
     { name: "Tracks", id: "tracks", isPage: false },
     { name: "Speakers", id: "speakers", isPage: false },
     { name: "Schedule", id: "dates", isPage: false },
-    { name: "Call For Papers", id: "cfp", isPage: false },
+    { name: "Call For Papers", id: "call-for-papers", isPage: true },
     { name: "Guidelines & Policies", id: "guidelines", isPage: true },
         { name: "Committee", id: "committee", isPage: true }, // Put committee here
 

@@ -9,6 +9,7 @@ import About from "./components/AboutSection.jsx"; // Capitalized 'About' for Re
 import Guidelines from "./Pages/Guidelines.jsx";
 import Registration from "./Pages/Registrations.jsx";
 import Committee from "./Pages/Committee.jsx";
+import CallForPapers from "./pages/CallForPaper.jsx"; 
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/about" element={<About />} /> {/* Capitalized <About /> */}
           <Route path="/committee" element={<Committee />} />
+          <Route path="/call-for-papers" element={<CallForPapers />} />
           
         </Routes>
       </BrowserRouter>
