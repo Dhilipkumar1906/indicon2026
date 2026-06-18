@@ -9,7 +9,7 @@ import About from "./components/AboutSection.jsx"; // Capitalized 'About' for Re
 import Guidelines from "./Pages/Guidelines.jsx";
 import Registration from "./Pages/Registrations.jsx";
 import Committee from "./Pages/Committee.jsx";
-import CallForPapers from "./pages/CallForPaper.jsx"; 
+import CallForPapers from "./Pages/CallForPaper.jsx"; 
 
 
 function App() {
