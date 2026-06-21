@@ -574,7 +574,7 @@ const [agreed, setAgreed] = useState(false);
           type="checkbox"
           checked={agreed}
           onChange={() => setAgreed(!agreed)}
-          className="mt-1 w-5 h-5 accent-[#F4D03F]"
+          className="mt-1 w-9 h-9 accent-[#F4D03F]"
         />
 
         <span className="text-sm text-gray-700">
