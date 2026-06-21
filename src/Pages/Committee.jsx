@@ -60,7 +60,7 @@ export default function Committee() {
       sectionName: "Publication Chair(s)",
       members: [
         { name: "Dr. V. Nagarajan", role: "Professor/Electronics-Pondicherry University", image: "/committee/19.jpg" },
-        { name: "Dr. R. Praveen", role: "Professor/CSE-NITPY", image: "/committee/20.jpg" },
+        { name: "Dr. R. Praveen", role: "Assistant Professor/CSE-NITPY", image: "/committee/20.jpg" },
       ],
       colSpan: "sm:grid-cols-2 max-w-2xl mx-auto",
     },

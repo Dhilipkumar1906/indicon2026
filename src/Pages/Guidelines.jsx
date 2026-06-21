@@ -276,7 +276,7 @@ const [agreed, setAgreed] = useState(false);
             <li>• <b>The IEEE conference style templates</b> for MS Word and LaTeX, provided by IEEE eXpress Conference Publishing, are available for download. Papers not following the style guidelines may be rejected without review.</li>
             <li>• Electronic submissions must be a readable PDF file.</li>
             <li>• Submitted manuscripts undergo mandatory <b>plagiarism screening </b>per IEEE guidelines. Papers violating ethics will be desk-rejected and the authors’ parent organizations informed.</li>
-            <li>• All submitted manuscripts are reviewed by the Program Committee under a <b>double-blind review process</b>:</li>
+            <li>• All submitted manuscripts are reviewed by the Program Committee :</li>
 	        <li>      - Submitted papers must NOT list any author names, affiliations, or other personally identifiable information.</li>
 	<li> - Authors should NOT identify themselves or their organization in the paper, either explicitly or by implication (e.g., through references or acknowledgments). References to one’s own work should be in the third person.</li>
 	<li> - Submissions are judged on correctness, originality, technical strength, significance, potential impact, quality of presentation, and relevance to the conference scope.</li>

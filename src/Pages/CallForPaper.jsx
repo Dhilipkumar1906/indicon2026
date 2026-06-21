@@ -73,7 +73,7 @@ export default function CallForPapers() {
         <div className="max-w-7xl mx-auto">
 
           {/* Heading - Reveal 1 */}
-          <div className="text-center mb-16 reveal-on-scroll" style={{ animationDelay: '0.1s' }}>
+          <div className="text-center mb-10 reveal-on-scroll" style={{ animationDelay: '0.1s' }}>
             <p className="text-[#C89B00] uppercase tracking-[4px] font-semibold">
               Paper Submission
             </p>
@@ -83,6 +83,21 @@ export default function CallForPapers() {
             </h2>
 
             <div className="w-24 h-1 bg-[#F4D03F] mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          {/* Intro Paragraph & Best Paper Award - NEWLY ADDED SECTION */}
+          <div className="max-w-4xl mx-auto text-center mb-16 reveal-on-scroll" style={{ animationDelay: '0.15s' }}>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 text-justify md:text-center px-4">
+              IEEE INDICON 2026 invites original, high-quality research papers from academicians, industry professionals, and researchers worldwide. The conference provides a premier platform to present and discuss the latest innovations, trends, and practical challenges encountered in the fields of engineering and technology.
+            </p>
+            
+            <div className="inline-block bg-[#FFF9E8] border-2 border-[#F4D03F]/50 px-8 py-4 rounded-full shadow-md transform hover:scale-105 transition-transform duration-300">
+              <p className="text-[#4A0012] font-extrabold text-lg md:text-xl flex items-center justify-center gap-3">
+                <span className="text-3xl">🏆</span> 
+                Track-wise Best Paper will be awarded!
+                <span className="text-3xl">🏆</span>
+              </p>
+            </div>
           </div>
 
           {/* SECTION 1: TOPICS OF INTEREST */}

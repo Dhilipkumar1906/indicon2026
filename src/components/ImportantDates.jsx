@@ -12,6 +12,10 @@ const dates = [
     title: "Acceptance Notification",
   },
   {
+    date: "10 November 2026",
+    title: "Registration Deadline",
+  },
+  {
     date: "16 November 2026",
     title: "Camera Ready Submission",
   },
@@ -49,7 +53,7 @@ export default function ImportantDates() {
           {/* Timeline Line */}
           <div className="hidden md:block absolute top-8 left-0 right-0 h-1 bg-[#D4AF37]"></div>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-6 gap-10">
 
             {dates.map((item, index) => (
               <div

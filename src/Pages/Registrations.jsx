@@ -16,19 +16,19 @@ export default function Registration() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  // Updated Data arrays with full GST breakdown
+  // Simplified Data arrays (Only Category and Total)
   const indianFees = [
-    { category: "IEEE Student Member", type: "Regular", base: "INR 9,000", gst: "INR 1,620", total: "INR 10,620" },
-    { category: "Non-IEEE Student Member", type: "Regular", base: "INR 11,000", gst: "INR 1,980", total: "INR 12,980" },
-    { category: "IEEE Member", type: "Regular", base: "INR 11,000", gst: "INR 1,980", total: "INR 12,980" },
-    { category: "Non-IEEE Member", type: "Regular", base: "INR 12,000", gst: "INR 2,160", total: "INR 14,160" },
+    { category: "IEEE Student Member", total: "INR 10,620" },
+    { category: "Non-IEEE Student Member", total: "INR 12,980" },
+    { category: "IEEE Member", total: "INR 12,980" },
+    { category: "Non-IEEE Member", total: "INR 14,160" },
   ];
 
   const foreignFees = [
-    { category: "IEEE Student Member", type: "Regular", base: "USD 300", gst: "USD 54", total: "USD 354" },
-    { category: "Non-IEEE Student Member", type: "Regular", base: "USD 350", gst: "USD 63", total: "USD 413" },
-    { category: "IEEE Member", type: "Regular", base: "USD 400", gst: "USD 72", total: "USD 472" },
-    { category: "Non-IEEE Member", type: "Regular", base: "USD 500", gst: "USD 90", total: "USD 590" },
+    { category: "IEEE Student Member", total: "USD 354" },
+    { category: "Non-IEEE Student Member", total: "USD 413" },
+    { category: "IEEE Member", total: "USD 472" },
+    { category: "Non-IEEE Member", total: "USD 590" },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Registration() {
         {/* Background Decorative Glow */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#F4D03F] opacity-[0.03] rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
           
           {/* Heading Section */}
           <motion.div 
@@ -54,9 +54,6 @@ export default function Registration() {
               Registration Details
             </h1>
             <div className="w-24 h-1 bg-[#F4D03F] mx-auto mt-6 rounded-full"></div>
-            <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-              Secure your participation at IEEE INDICON 2026. All registrations include access to technical sessions, keynotes, and conference materials.
-            </p>
           </motion.div>
 
           <motion.div 
@@ -65,85 +62,77 @@ export default function Registration() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
           >
-            {/* Author Notice */}
-            <motion.div variants={itemVariants} className="bg-[#FFF9E8] border-l-4 border-[#F4D03F] p-6 rounded-r-2xl mb-12 shadow-sm flex items-start gap-4 max-w-4xl mx-auto">
-              <div className="text-[#C89B00] text-2xl mt-1">⚠️</div>
-              <div>
-                <h4 className="font-bold text-[#4A0012] mb-1">Mandatory Author Registration</h4>
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                  At least one author of each accepted paper must register at the applicable rate to have the paper included in the conference proceedings.
-                </p>
-              </div>
+            
+            {/* Mandatory Requirement Paragraph (Exact from Image) */}
+            <motion.div variants={itemVariants} className="bg-white p-8 md:p-10 rounded-[2rem] shadow-lg border-t-4 border-[#4A0012] mb-10 text-gray-700 leading-relaxed text-lg text-justify">
+              At least one author of each accepted paper must complete the registration by paying the appropriate conference fee in order for the paper to be included in the <strong>IEEE INDICON 2026</strong> conference program and submitted for publication in <strong>IEEE Xplore</strong> <em>(subject to compliance with IEEE quality standards and presentation at the conference)</em>.
+            </motion.div>
+
+            {/* Registration Guidelines (Exact from Image) */}
+            <motion.div variants={itemVariants} className="bg-[#FFF9E8] p-8 md:p-10 rounded-[2rem] shadow-md border border-[#F4D03F]/30 mb-16">
+              <h3 className="text-2xl font-bold text-[#4A0012] mb-6">Registration Guidelines</h3>
+              <ul className="space-y-5 text-gray-700 list-disc pl-5 marker:text-[#C89B00] text-lg">
+                <li><strong>Eligibility for IEEE Xplore:</strong> Only registered and presented papers will be considered for <strong>IEEE Xplore Digital Library</strong>.</li>
+                <li>Each full registration covers <strong>one (1) paper</strong> with a maximum of <strong>6 pages</strong>.</li>
+                <li>A maximum of <strong>2 additional pages</strong> can be included with an overlength fee of <strong>₹1000 / $18</strong> per extra page.</li>
+                <li><strong>Registration fees are non-refundable</strong> under any circumstances.</li>
+                <li>Authors must retain a copy of the <strong>payment transaction ID or receipt</strong> for use during the registration process.</li>
+                <li>Authors registering under <strong>IEEE Member</strong> or <strong>Student</strong> categories must upload a valid <strong>IEEE membership card</strong> or <strong>student ID</strong> respectively.</li>
+              </ul>
             </motion.div>
 
             {/* Indian Delegates Table */}
             <motion.div variants={itemVariants} className="bg-white rounded-[2rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden mb-12">
-              <div className="bg-[#4A0012] p-8 text-center relative overflow-hidden">
+              <div className="bg-[#4A0012] p-6 text-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2"></div>
                 <h2 className="text-3xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
                   🇮🇳 Indian Delegates
                 </h2>
               </div>
               
-              <div className="p-6 md:p-8 overflow-x-auto">
-                <div className="min-w-[800px]">
-                  {/* Table Header */}
-                  <div className="grid grid-cols-12 gap-4 bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold text-sm uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
-                    <div className="col-span-4 pl-2">Category</div>
-                    <div className="col-span-2 text-center text-gray-500">Type</div>
-                    <div className="col-span-2 text-center text-gray-500">Fee (excl. GST)</div>
-                    <div className="col-span-2 text-center text-gray-500">GST @ 18%</div>
-                    <div className="col-span-2 text-right pr-2">Total (incl. GST)</div>
-                  </div>
-                  
-                  {/* Table Rows */}
-                  <div className="space-y-2">
-                    {indianFees.map((item, index) => (
-                      <div key={index} className="grid grid-cols-12 gap-4 items-center p-4 rounded-xl hover:bg-[#FFF9E8]/50 transition-colors border border-transparent hover:border-[#F4D03F]/30 group">
-                        <div className="col-span-4 font-semibold text-gray-800 group-hover:text-[#4A0012] pl-2">{item.category}</div>
-                        <div className="col-span-2 text-center text-sm bg-gray-100 text-gray-600 py-1 rounded-md mx-4">{item.type}</div>
-                        <div className="col-span-2 text-center text-gray-600 font-medium">{item.base}</div>
-                        <div className="col-span-2 text-center text-gray-500 text-sm">{item.gst}</div>
-                        <div className="col-span-2 text-right font-bold text-[17px] text-[#4A0012] bg-[#FFF9E8] py-1 px-3 rounded-lg border border-[#F4D03F]/40">{item.total}</div>
-                      </div>
-                    ))}
-                  </div>
+              <div className="p-6 md:p-8">
+                {/* Table Header */}
+                <div className="flex justify-between items-center bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold md:text-lg uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
+                  <div className="pl-2 md:pl-4">Category</div>
+                  <div className="pr-2 md:pr-4 text-right">Fee (incl. GST)</div>
+                </div>
+                
+                {/* Table Rows */}
+                <div className="space-y-3 mt-4">
+                  {indianFees.map((item, index) => (
+                    <div key={index} className="flex justify-between items-center p-4 md:p-5 rounded-xl hover:bg-[#FFF9E8]/80 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group shadow-sm">
+                      <div className="font-semibold text-gray-800 text-base md:text-lg group-hover:text-[#4A0012] pl-2 md:pl-4">{item.category}</div>
+                      <div className="font-bold text-lg md:text-xl text-[#4A0012] bg-[#FFF9E8] py-2 px-4 md:px-6 rounded-lg border border-[#F4D03F]/50">{item.total}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
 
             {/* Foreign Delegates Table */}
             <motion.div variants={itemVariants} className="bg-white rounded-[2rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden mb-16">
-              <div className="bg-[#4A0012] p-8 text-center relative overflow-hidden">
+              <div className="bg-[#4A0012] p-6 text-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2"></div>
                 <h2 className="text-3xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
                   🌍 Foreign Delegates
                 </h2>
               </div>
               
-              <div className="p-6 md:p-8 overflow-x-auto">
-                <div className="min-w-[800px]">
-                  {/* Table Header */}
-                  <div className="grid grid-cols-12 gap-4 bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold text-sm uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
-                    <div className="col-span-4 pl-2">Category</div>
-                    <div className="col-span-2 text-center text-gray-500">Type</div>
-                    <div className="col-span-2 text-center text-gray-500">Fee (excl. GST)</div>
-                    <div className="col-span-2 text-center text-gray-500">GST @ 18%</div>
-                    <div className="col-span-2 text-right pr-2">Total (incl. GST)</div>
-                  </div>
-                  
-                  {/* Table Rows */}
-                  <div className="space-y-2">
-                    {foreignFees.map((item, index) => (
-                      <div key={index} className="grid grid-cols-12 gap-4 items-center p-4 rounded-xl hover:bg-[#FFF9E8]/50 transition-colors border border-transparent hover:border-[#F4D03F]/30 group">
-                        <div className="col-span-4 font-semibold text-gray-800 group-hover:text-[#4A0012] pl-2">{item.category}</div>
-                        <div className="col-span-2 text-center text-sm bg-gray-100 text-gray-600 py-1 rounded-md mx-4">{item.type}</div>
-                        <div className="col-span-2 text-center text-gray-600 font-medium">{item.base}</div>
-                        <div className="col-span-2 text-center text-gray-500 text-sm">{item.gst}</div>
-                        <div className="col-span-2 text-right font-bold text-[17px] text-[#4A0012] bg-[#FFF9E8] py-1 px-3 rounded-lg border border-[#F4D03F]/40">{item.total}</div>
-                      </div>
-                    ))}
-                  </div>
+              <div className="p-6 md:p-8">
+                {/* Table Header */}
+                <div className="flex justify-between items-center bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold md:text-lg uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
+                  <div className="pl-2 md:pl-4">Category</div>
+                  <div className="pr-2 md:pr-4 text-right">Fee (incl. GST)</div>
+                </div>
+                
+                {/* Table Rows */}
+                <div className="space-y-3 mt-4">
+                  {foreignFees.map((item, index) => (
+                    <div key={index} className="flex justify-between items-center p-4 md:p-5 rounded-xl hover:bg-[#FFF9E8]/80 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group shadow-sm">
+                      <div className="font-semibold text-gray-800 text-base md:text-lg group-hover:text-[#4A0012] pl-2 md:pl-4">{item.category}</div>
+                      <div className="font-bold text-lg md:text-xl text-[#4A0012] bg-[#FFF9E8] py-2 px-4 md:px-6 rounded-lg border border-[#F4D03F]/50">{item.total}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -152,7 +141,7 @@ export default function Registration() {
             <motion.div variants={itemVariants} className="max-w-3xl mx-auto bg-red-50 border border-red-100 rounded-2xl p-5 mb-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3 shadow-sm">
               <span className="text-2xl">⏳</span>
               <p className="text-red-800 font-medium text-sm md:text-base">
-                <strong className="font-bold">Important:</strong> Registration window closes on <span className="underline decoration-red-300 decoration-2 underline-offset-2">5 December 2026</span> shortly before the conference.
+                <strong className="font-bold">Important:</strong> Registration window closes on <span className="underline decoration-red-300 decoration-2 underline-offset-2">5 December 2026</span>.
               </p>
             </motion.div>
 
