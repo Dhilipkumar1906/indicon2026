@@ -602,7 +602,7 @@ const [agreed, setAgreed] = useState(false);
         </button>
 
         <a
-          href="/"
+          href="https://cmt3.research.microsoft.com/INDICON2026/Submission/Index"
           target="_blank"
           rel="noopener noreferrer"
           className={`
