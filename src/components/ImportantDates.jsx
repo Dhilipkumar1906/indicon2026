@@ -1,6 +1,6 @@
 const dates = [
   {
-    date: "30 June 2026",
+    date: "22 June 2026",
     title: "Submission Start Date",
   },
   {

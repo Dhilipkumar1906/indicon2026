@@ -483,7 +483,7 @@ const [agreed, setAgreed] = useState(false);
 
                 <tr className="border-b">
                   <td className="p-4">Submission Start Date</td>
-                  <td className="p-4">30 June 2026</td>
+                  <td className="p-4">22 June 2026</td>
                 </tr>
 
                 <tr className="border-b">
@@ -560,7 +560,7 @@ const [agreed, setAgreed] = useState(false);
       </h2>
 
       <p className="text-gray-600 leading-relaxed mb-6">
-        <b>Paper submission via Microsoft CMT will open soon.</b>    
+            
 
         Before proceeding to the Microsoft CMT submission portal,
         authors must confirm that they have read and understood

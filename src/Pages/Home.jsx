@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
+import CMTNotification from "../components/CMTNotification"; // Path-a check pannikonga
 import AboutSection from "../components/AboutSection";
 import Tracks from "../components/Tracks";
 import ImportantDates from "../components/ImportantDates";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
 
       <Hero />
+      <CMTNotification/>
       <Countdown/>
       <AboutSection/>
       <Tracks />
