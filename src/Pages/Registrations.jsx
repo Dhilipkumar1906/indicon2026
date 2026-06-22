@@ -89,7 +89,7 @@ export default function Registration() {
                 <div className="bg-[#4A0012] py-5 px-6 text-center relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-xl translate-x-1/2 -translate-y-1/2"></div>
                   <h2 className="text-xl md:text-2xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
-                    🇮🇳 Indian Delegates
+                    Indian Delegates
                   </h2>
                 </div>
                 
@@ -117,7 +117,7 @@ export default function Registration() {
                 <div className="bg-[#4A0012] py-5 px-6 text-center relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-xl translate-x-1/2 -translate-y-1/2"></div>
                   <h2 className="text-xl md:text-2xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
-                    🌍 Foreign Delegates
+                    Foreign Delegates
                   </h2>
                 </div>
                 
@@ -146,7 +146,7 @@ export default function Registration() {
             <motion.div variants={itemVariants} className="max-w-2xl mx-auto bg-red-50 border border-red-100 rounded-2xl p-4 mb-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3 shadow-sm">
               <span className="text-xl">⏳</span>
               <p className="text-red-800 font-medium text-sm md:text-base">
-                <strong className="font-bold">Important:</strong> Registration window closes on <span className="underline decoration-red-300 decoration-2 underline-offset-2">5 December 2026</span>.
+                <strong className="font-bold">Important:</strong> Registration window closes on <span className="underline decoration-red-300 decoration-2 underline-offset-2">10 November 2026</span>.
               </p>
             </motion.div>
 

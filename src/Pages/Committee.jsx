@@ -41,7 +41,7 @@ export default function Committee() {
     {
       sectionName: "Conference Chair",
       members: [
-        { name: "Dr. Brindha Saminathan", role: "Professor/ECE,\nSri Sai Ram Engineering College\nTreasurer-IEEE Madras Section", image: "/committee/13.png" },
+        { name: "Dr. Brindha Saminathan", role: "Professor/ECE\nSri Sai Ram Engineering College\nTreasurer-IEEE Madras Section", image: "/committee/13.png"},
       ],
       colSpan: "md:grid-cols-1 max-w-sm mx-auto",
     },
@@ -192,10 +192,11 @@ export default function Committee() {
                           mx-auto w-full
                         "
                       >
-                        <h3 className="text-2xl md:text-3xl font-bold text-[#4A0012] mb-3">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#4A0012] mb-3 whitespace-pre-line">
                           {member.name}
                         </h3>
-                        <p className="text-lg text-[#C89B00] font-semibold tracking-wide">
+                        {/* ✅ added whitespace-pre-line here */}
+                        <p className="text-[15px] text-gray-700 leading-relaxed font-semibold px-2 whitespace-pre-line">
                           {member.role}
                         </p>
                       </motion.div>
@@ -236,11 +237,12 @@ export default function Committee() {
                         
                         {/* Details */}
                         <div>
-                          <h3 className="text-xl font-bold text-[#4A0012] group-hover:text-[#B8860B] transition-colors">
+                          <h3 className="text-xl font-bold text-[#4A0012] group-hover:text-[#B8860B] transition-colors whitespace-pre-line">
                             {member.name}
                           </h3>
                           <div className="w-10 h-[2px] bg-[#F4D03F] mx-auto my-3 opacity-50"></div>
-                          <p className="text-[15px] text-gray-600 leading-relaxed font-medium px-2">
+                          {/* ✅ added whitespace-pre-line here */}
+                          <p className="text-[15px] text-gray-600 leading-relaxed font-medium px-2 whitespace-pre-line">
                             {member.role}
                           </p>
                         </div>
