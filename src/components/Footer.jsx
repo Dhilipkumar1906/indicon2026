@@ -136,13 +136,18 @@ export default function Footer() {
             Hosted by Sri Sairam Engineering College, Chennai
           </p>
 
-          {/* Your Developer Credits Tag */}
-          {/*<p className="text-gray-400 text-sm font-medium tracking-wide">
+          {/* Your Developer Credits Tag with GitHub Link */}
+          <p className="text-gray-400 text-sm font-medium tracking-wide">
             Designed & Developed by{" "}
-            <span className="text-[#FFD700] hover:text-[#fff] transition-colors duration-300 cursor-pointer font-bold">
+            <a 
+              href="https://github.com/Dhilipkumar1906" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#FFD700] hover:text-[#fff] transition-colors duration-300 font-bold decoration-[#FFD700]/50 hover:decoration-white underline-offset-4"
+            >
               Dhilip Kumar M
-            </span>
-          </p>*/}
+            </a>
+          </p>
 
         </div>
       </div>
