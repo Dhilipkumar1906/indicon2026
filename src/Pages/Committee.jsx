@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Footer from "../components/Footer"; 
+import Footer from "../components/Footer";
 
 export default function Committee() {
   // Animation variants
@@ -13,59 +13,64 @@ export default function Committee() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  // Structured Data from Excel with Image paths and Separated Tracks
+  // Structured Data from Excel with \n added for PERFECT Logical Line Breaks
   const committeeData = [
     {
       sectionName: "The Core Steering & Advisory Committees",
       members: [
-        { name: "Dr. Prerna Gaur", role: "Chair-IEEE India Council (2025-2026)", image: "/committee/1.jpg" },
-        { name: "Dr. Saiprakash LeoMuthu", role: "Chairman & CEO, Sairam Institutions", image: "/committee/CEO1.jpg" },
-        { name: "Dr. Preeti Bajaj", role: "Chair-Elect IEEE India Council (2025-2026)", image: "/committee/3.jpg" },
-        { name: "Dr. Debabrata Das", role: "Past Chair-IEEE India Council", image: "/committee/4.jpg" },
-        { name: "Shri. Deepak Mathur", role: "Member-IEEE Governance (2026)", image: "/committee/5.jpg" },
-        { name: "Dr. S.M. Sameer", role: "R10 - Director-Elect (2025-2026)", image: "/committee/6.jpg" },
-        { name: "Shri. Srikanth Chandrasekaran", role: "Country Head-GIEEE, Bangalore", image: "/committee/7.jpg" },
-        { name: "Dr. Amit Kumar", role: "Chairman - Section and Chapter Committee [R10]", image: "/committee/8.png" },
-        { name: "Dr. Manfred Schindler", role: "IEEE VP-Technical Activities", image: "/committee/9.webp" },
+        { name: "Dr. Prerna Gaur", role: "Chair-IEEE India Council\n(2025-2026)", image: "/committee/1.jpg" },
+        { name: "Dr. Saiprakash\nLeoMuthu", role: "Chairman & CEO,\nSairam Institutions", image: "/committee/CEO1.jpg" },
+        { name: "Dr. Preeti Bajaj", role: "Chair-Elect IEEE India Council\n(2025-2026)", image: "/committee/3.jpg" },
+        { name: "Dr. Debabrata Das", role: "Past Chair-IEEE\nIndia Council", image: "/committee/4.jpg" },
+        { name: "Shri. Deepak Mathur", role: "Member-IEEE Governance\n(2026)", image: "/committee/5.jpg" },
+        { name: "Dr. S.M. Sameer", role: "R10 - Director-Elect\n(2025-2026)", image: "/committee/6.jpg" },
+        { name: "Shri. Srikanth\nChandrasekaran", role: "Country Head-GIEEE,\nBangalore", image: "/committee/7.jpg" },
+        { name: "Dr. Amit Kumar", role: "Chairman - Section and\nChapter Committee [R10]", image: "/committee/37.jpg" },
       ],
       colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
     },
     {
       sectionName: "General Chair(s)",
       members: [
-        { name: "Dr. P. Sakthivel", role: "Chairman-IEEE Madras Section", image: "/committee/10.jpg" },
-        { name: "Dr. J. Raja", role: "Principal-Sri Sai Ram Engineering College", image: "/committee/11.jpg" },
-        { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-IITKGP", image: "/committee/12.jpg" },
+        { name: "Dr. P. Sakthivel", role: "Chairman-IEEE\nMadras Section", image: "/committee/10.jpg" },
+        { name: "Dr. J. Raja", role: "Principal-\nSri Sai Ram Engineering College", image: "/committee/11.jpg" },
+        { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-\nIITKGP", image: "/committee/12.jpg" },
       ],
       colSpan: "sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl mx-auto",
     },
     {
       sectionName: "Conference Chair",
       members: [
-        { name: "Dr. Brindha Saminathan", role: "Professor/ECE, Sri Sai Ram Engineering College | Treasurer-IEEE Madras Section", image: "/committee/13.png" },
+        { name: "Dr. Brindha Saminathan", role: "Professor/ECE,\nSri Sai Ram Engineering College\nTreasurer-IEEE Madras Section", image: "/committee/13.png" },
       ],
       colSpan: "md:grid-cols-1 max-w-sm mx-auto",
     },
     {
       sectionName: "Technical Program Committee (TPC) Chair(s)",
       members: [
+        { name: "Dr. S. Radha", role: "Secretary-IEEE\nMadras Section", image: "/committee/015.jpg" },
         { name: "Dr. K. Palanikumar", role: "Principal-Sri Sairam Institute of Technology", image: "/committee/18.jpg" },
-        { name: "Dr. S. Radha", role: "Secretary-IEEE Madras Section", image: "/committee/015.jpg" },
-        { name: "Dr. T. Shanmuganantham", role: "Professor/Electronics-Pondicherry Central University", image: "/committee/16.jpg" },
-        { name: "Dr. Nandhan", role: "Secretary-India Council", image: "/committee/17.jpg" },
+        { name: "Dr. T. Shanmuganantham", role: "Professor/Electronics-\nPondicherry Central University", image: "/committee/16.jpg" },
+        { name: "Dr. K. A. Mohamed\nJunaid", role: "Principal-\nRMK Engineering College", image: "/committee/junaid.jpg" },
       ],
       colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
     },
     {
+      sectionName: "Organizing Secretaries",
+      members: [
+        { name: "Dr. Nandhan", role: "Secretary-India Council", image: "/committee/17.jpg" },
+        { name: "Dr. S. Arumugaperumal", role: "VC-Professional Activities MAS", image: "/committee/30.jpg" },
+      ],
+      colSpan: "sm:grid-cols-2 max-w-2xl mx-auto",
+    },
+    {
       sectionName: "Publication Chair(s)",
       members: [
-        { name: "Dr. V. Nagarajan", role: "Professor/Electronics-Pondicherry University", image: "/committee/19.jpg" },
+        { name: "Dr. V. Nagarajan", role: "Professor/Electronics Pondicherry University", image: "/committee/19.jpg" },
         { name: "Dr. R. Praveen", role: "Assistant Professor/CSE-NITPY", image: "/committee/20.jpg" },
       ],
       colSpan: "sm:grid-cols-2 max-w-2xl mx-auto",
     },
-
-    // --- SEPARATED TRACK CHAIRS ---
     {
       sectionName: "WIE Track Chair(s)",
       members: [
@@ -78,9 +83,9 @@ export default function Committee() {
     {
       sectionName: "SAC Track Chair(s)",
       members: [
-        { name: "Dr. Anuradha", role: "VC-SAC India Council", image: "/committee/26.jpg" },
+        { name: "Dr. Anuradha Tomar", role: "VC-SAC India Council", image: "/committee/26.jpg" },
         { name: "Dr. Abhishek Appaji", role: "Member-SAC India Council", image: "/committee/27.png" },
-        { name: "Dr. S. Koteeswaran", role: "R&D Head-RMK Engineering College", image: "/committee/28.jpg" },
+        { name: "Dr. S. Koteeswaran", role: "SAC Chair - IEEE Madrs Section", image: "/committee/28.jpg" },
       ],
       colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
     },
@@ -95,30 +100,20 @@ export default function Committee() {
     {
       sectionName: "Paper Presentation Chair(s)",
       members: [
-        { name: "Dr. M. Venkateshkumar", role: "Professor/EEE-Amirta Univ", image: "/committee/29.jpg" },
-        { name: "Dr. S. Arumugaperumal", role: "VC-Professional Activities MAS", image: "/committee/30.jpg" },
-        { name: "Dr. K. Vijayakumar", role: "Professor/IT- St.Joseph IT", image: "/committee/031.jpg" },
-        { name: "Dr. Venkateswaran", role: "Professor/ECE-SSNCE", image: "/committee/32.jpg" },
+        { name: "Dr. M. Venkateshkumar", role: "Professor/EEE- Amirta Univ", image: "/committee/29.jpg" },
+        { name: "Dr. K. Vijayakumar", role: "Professor/IT-St.Joseph IT", image: "/committee/031.jpg" },
+        { name: "Dr. N. Venkateswaran", role: "Professor/ECE-SSNCE", image: "/committee/32.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto",
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
     },
     {
       sectionName: "Special Sessions / Tutorial Chairs",
       members: [
         { name: "Dr. T. Sree Sharmila", role: "Professor/IT-Anna Univ", image: "/committee/33.jpg" },
-        { name: "Dr. J. Arputha Vijayaselvi Jan", role: "Principal-Kings Engg College", image: "/committee/34.jpg" },
-        { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman – Industry MAS", image: "/committee/35.jpg" },
+        { name: "Dr. J. Arputha\nVijayaselvi Jan", role: "Principal-Kings Engg College", image: "/committee/34.jpg" },
+        { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman –Industry MAS", image: "/committee/35.jpg" },
       ],
       colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
-    },
-    // ------------------------------
-
-    {
-      sectionName: "Keynote & Plenary Chairs",
-      members: [
-        { name: "Dr. K. A. Mohamed Junaid", role: "Principal-RMK Engineering College", image: "/committee/36.jpg" },
-      ],
-      colSpan: "md:grid-cols-1 max-w-sm mx-auto",
     },
     {
       sectionName: "Operations & Logistics Committees",
@@ -127,6 +122,7 @@ export default function Committee() {
       ],
       colSpan: "md:grid-cols-1 max-w-2xl mx-auto",
     }
+    
   ];
 
   // Helper to extract first letter for Avatar fallback
@@ -244,7 +240,7 @@ export default function Committee() {
                             {member.name}
                           </h3>
                           <div className="w-10 h-[2px] bg-[#F4D03F] mx-auto my-3 opacity-50"></div>
-                          <p className="text-sm text-gray-600 leading-relaxed font-medium px-2">
+                          <p className="text-[15px] text-gray-600 leading-relaxed font-medium px-2">
                             {member.role}
                           </p>
                         </div>
