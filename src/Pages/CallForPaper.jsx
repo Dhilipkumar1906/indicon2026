@@ -133,43 +133,7 @@ export default function CallForPapers() {
           </div>
 
 
-          {/* SECTION 2: SUBMISSION GUIDELINES */}
-          <div 
-            className="bg-white rounded-[2rem] p-8 md:p-10 shadow-xl border border-[#F4D03F]/20 mb-12 transform transition-all duration-300 hover:shadow-2xl reveal-on-scroll"
-            style={{ animationDelay: '0.3s' }}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-[#4A0012] mb-8 flex items-center gap-3">
-              <span className="text-3xl md:text-4xl">📄</span> Submission Guidelines
-            </h3>
-
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
-              {[
-                "Original and unpublished research work only",
-                "Manuscript must be strictly in IEEE format",
-                "Double-blind peer review process applies",
-                "Submit as a readable PDF file in English"
-              ].map((rule, index) => (
-                <div key={index} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
-                  <div className="w-8 h-8 rounded-full bg-[#FFF9E8] border border-[#F4D03F]/50 flex items-center justify-center text-[#C89B00] font-bold flex-shrink-0">
-                    {index + 1}
-                  </div>
-                  <p className="text-gray-700 font-medium">{rule}</p>
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={() => {
-                window.scrollTo(0, 0);
-                navigate("/guidelines");
-              }}
-              className="group flex items-center justify-center gap-2 w-full md:w-auto md:px-10 bg-[#FFF9E8] text-[#4A0012] border border-[#F4D03F]/50 py-4 rounded-xl font-bold text-lg hover:bg-[#F4D03F] hover:shadow-lg transition-all duration-300 mx-auto"
-            >
-              Read Full Guidelines
-              <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </button>
-          </div>
-
+        
 
           {/* SECTION 3: HOW TO SUBMIT */}
           <div 

@@ -18,17 +18,17 @@ export default function Registration() {
 
   // Simplified Data arrays (Only Category and Total)
   const indianFees = [
-    { category: "IEEE Student Member", total: "INR 10,620" },
-    { category: "Non-IEEE Student Member", total: "INR 12,980" },
-    { category: "IEEE Member", total: "INR 12,980" },
-    { category: "Non-IEEE Member", total: "INR 14,160" },
+    { category: "IEEE Student Member", total: "INR 9,000" },
+    { category: "Non-IEEE Student Member", total: "INR 10,000" },
+    { category: "IEEE Member", total: "INR 10,000" },
+    { category: "Non-IEEE Member", total: "INR 11,000" },
   ];
 
   const foreignFees = [
-    { category: "IEEE Student Member", total: "USD 354" },
-    { category: "Non-IEEE Student Member", total: "USD 413" },
-    { category: "IEEE Member", total: "USD 472" },
-    { category: "Non-IEEE Member", total: "USD 590" },
+    { category: "IEEE Student Member", total: "USD 150" },
+    { category: "Non-IEEE Student Member", total: "USD 200" },
+    { category: "IEEE Member", total: "USD 200" },
+    { category: "Non-IEEE Member", total: "USD 250" },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Registration() {
         {/* Background Decorative Glow */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#F4D03F] opacity-[0.03] rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           
           {/* Heading Section */}
           <motion.div 
@@ -50,7 +50,7 @@ export default function Registration() {
             <p className="text-[#C89B00] uppercase tracking-[4px] font-semibold mt-8">
               IEEE INDICON 2026
             </p>
-            <h1 className="text-5xl md:text-6xl font-bold text-[#4A0012] mt-3">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4A0012] mt-3">
               Registration Details
             </h1>
             <div className="w-24 h-1 bg-[#F4D03F] mx-auto mt-6 rounded-full"></div>
@@ -63,15 +63,15 @@ export default function Registration() {
             viewport={{ once: true, amount: 0.1 }}
           >
             
-            {/* Mandatory Requirement Paragraph (Exact from Image) */}
-            <motion.div variants={itemVariants} className="bg-white p-8 md:p-10 rounded-[2rem] shadow-lg border-t-4 border-[#4A0012] mb-10 text-gray-700 leading-relaxed text-lg text-justify">
+            {/* Mandatory Requirement Paragraph */}
+            <motion.div variants={itemVariants} className="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-lg border-t-4 border-[#4A0012] mb-10 text-gray-700 leading-relaxed text-[15px] md:text-base text-justify">
               At least one author of each accepted paper must complete the registration by paying the appropriate conference fee in order for the paper to be included in the <strong>IEEE INDICON 2026</strong> conference program and submitted for publication in <strong>IEEE Xplore</strong> <em>(subject to compliance with IEEE quality standards and presentation at the conference)</em>.
             </motion.div>
 
-            {/* Registration Guidelines (Exact from Image) */}
-            <motion.div variants={itemVariants} className="bg-[#FFF9E8] p-8 md:p-10 rounded-[2rem] shadow-md border border-[#F4D03F]/30 mb-16">
-              <h3 className="text-2xl font-bold text-[#4A0012] mb-6">Registration Guidelines</h3>
-              <ul className="space-y-5 text-gray-700 list-disc pl-5 marker:text-[#C89B00] text-lg">
+            {/* Registration Guidelines */}
+            <motion.div variants={itemVariants} className="max-w-5xl mx-auto bg-[#FFF9E8] p-8 md:p-10 rounded-3xl shadow-sm border border-[#F4D03F]/30 mb-16">
+              <h3 className="text-xl md:text-2xl font-bold text-[#4A0012] mb-6">Registration Guidelines</h3>
+              <ul className="space-y-4 text-gray-700 list-disc pl-5 marker:text-[#C89B00] text-[15px] md:text-base">
                 <li><strong>Eligibility for IEEE Xplore:</strong> Only registered and presented papers will be considered for <strong>IEEE Xplore Digital Library</strong>.</li>
                 <li>Each full registration covers <strong>one (1) paper</strong> with a maximum of <strong>6 pages</strong>.</li>
                 <li>A maximum of <strong>2 additional pages</strong> can be included with an overlength fee of <strong>₹1000 / $18</strong> per extra page.</li>
@@ -81,65 +81,70 @@ export default function Registration() {
               </ul>
             </motion.div>
 
-            {/* Indian Delegates Table */}
-            <motion.div variants={itemVariants} className="bg-white rounded-[2rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden mb-12">
-              <div className="bg-[#4A0012] p-6 text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2"></div>
-                <h2 className="text-3xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
-                  🇮🇳 Indian Delegates
-                </h2>
-              </div>
+            {/* Tables Grid Layout (Side-by-Side on large screens) */}
+            <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               
-              <div className="p-6 md:p-8">
-                {/* Table Header */}
-                <div className="flex justify-between items-center bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold md:text-lg uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
-                  <div className="pl-2 md:pl-4">Category</div>
-                  <div className="pr-2 md:pr-4 text-right">Fee (incl. GST)</div>
+              {/* Indian Delegates Table */}
+              <div className="bg-white rounded-[1.5rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-[#4A0012] py-5 px-6 text-center relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-xl translate-x-1/2 -translate-y-1/2"></div>
+                  <h2 className="text-xl md:text-2xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
+                    🇮🇳 Indian Delegates
+                  </h2>
                 </div>
                 
-                {/* Table Rows */}
-                <div className="space-y-3 mt-4">
-                  {indianFees.map((item, index) => (
-                    <div key={index} className="flex justify-between items-center p-4 md:p-5 rounded-xl hover:bg-[#FFF9E8]/80 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group shadow-sm">
-                      <div className="font-semibold text-gray-800 text-base md:text-lg group-hover:text-[#4A0012] pl-2 md:pl-4">{item.category}</div>
-                      <div className="font-bold text-lg md:text-xl text-[#4A0012] bg-[#FFF9E8] py-2 px-4 md:px-6 rounded-lg border border-[#F4D03F]/50">{item.total}</div>
-                    </div>
-                  ))}
+                <div className="p-5 md:p-6 flex-1 flex flex-col">
+                  {/* Table Header */}
+                  <div className="flex justify-between items-center bg-[#faf8f2] py-3 px-4 rounded-lg text-[#4A0012] font-bold text-xs md:text-sm uppercase tracking-wider mb-3 border border-[#F4D03F]/20">
+                    <div>Category</div>
+                    <div className="text-right">Fee (incl. GST)</div>
+                  </div>
+                  
+                  {/* Table Rows */}
+                  <div className="space-y-3 mt-2">
+                    {indianFees.map((item, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 px-4 rounded-lg hover:bg-[#FFF9E8]/60 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group">
+                        <div className="font-medium text-gray-700 text-sm md:text-base group-hover:text-[#4A0012]">{item.category}</div>
+                        <div className="font-bold text-sm md:text-base text-[#4A0012] bg-[#FFF9E8] py-1.5 px-3 rounded-md border border-[#F4D03F]/40 whitespace-nowrap">{item.total}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Foreign Delegates Table */}
-            <motion.div variants={itemVariants} className="bg-white rounded-[2rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden mb-16">
-              <div className="bg-[#4A0012] p-6 text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2"></div>
-                <h2 className="text-3xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
-                  🌍 Foreign Delegates
-                </h2>
-              </div>
-              
-              <div className="p-6 md:p-8">
-                {/* Table Header */}
-                <div className="flex justify-between items-center bg-[#faf8f2] p-4 rounded-xl text-[#4A0012] font-bold md:text-lg uppercase tracking-wider mb-2 border border-[#F4D03F]/20">
-                  <div className="pl-2 md:pl-4">Category</div>
-                  <div className="pr-2 md:pr-4 text-right">Fee (incl. GST)</div>
+              {/* Foreign Delegates Table */}
+              <div className="bg-white rounded-[1.5rem] shadow-xl border border-[#F4D03F]/30 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-[#4A0012] py-5 px-6 text-center relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full blur-xl translate-x-1/2 -translate-y-1/2"></div>
+                  <h2 className="text-xl md:text-2xl font-bold text-white relative z-10 flex items-center justify-center gap-3">
+                    🌍 Foreign Delegates
+                  </h2>
                 </div>
                 
-                {/* Table Rows */}
-                <div className="space-y-3 mt-4">
-                  {foreignFees.map((item, index) => (
-                    <div key={index} className="flex justify-between items-center p-4 md:p-5 rounded-xl hover:bg-[#FFF9E8]/80 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group shadow-sm">
-                      <div className="font-semibold text-gray-800 text-base md:text-lg group-hover:text-[#4A0012] pl-2 md:pl-4">{item.category}</div>
-                      <div className="font-bold text-lg md:text-xl text-[#4A0012] bg-[#FFF9E8] py-2 px-4 md:px-6 rounded-lg border border-[#F4D03F]/50">{item.total}</div>
-                    </div>
-                  ))}
+                <div className="p-5 md:p-6 flex-1 flex flex-col">
+                  {/* Table Header */}
+                  <div className="flex justify-between items-center bg-[#faf8f2] py-3 px-4 rounded-lg text-[#4A0012] font-bold text-xs md:text-sm uppercase tracking-wider mb-3 border border-[#F4D03F]/20">
+                    <div>Category</div>
+                    <div className="text-right">Fee (incl. GST)</div>
+                  </div>
+                  
+                  {/* Table Rows */}
+                  <div className="space-y-3 mt-2">
+                    {foreignFees.map((item, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 px-4 rounded-lg hover:bg-[#FFF9E8]/60 transition-colors border border-gray-100 hover:border-[#F4D03F]/40 group">
+                        <div className="font-medium text-gray-700 text-sm md:text-base group-hover:text-[#4A0012]">{item.category}</div>
+                        <div className="font-bold text-sm md:text-base text-[#4A0012] bg-[#FFF9E8] py-1.5 px-3 rounded-md border border-[#F4D03F]/40 whitespace-nowrap">{item.total}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+
             </motion.div>
 
             {/* Deadline Banner */}
-            <motion.div variants={itemVariants} className="max-w-3xl mx-auto bg-red-50 border border-red-100 rounded-2xl p-5 mb-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3 shadow-sm">
-              <span className="text-2xl">⏳</span>
+            <motion.div variants={itemVariants} className="max-w-2xl mx-auto bg-red-50 border border-red-100 rounded-2xl p-4 mb-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3 shadow-sm">
+              <span className="text-xl">⏳</span>
               <p className="text-red-800 font-medium text-sm md:text-base">
                 <strong className="font-bold">Important:</strong> Registration window closes on <span className="underline decoration-red-300 decoration-2 underline-offset-2">5 December 2026</span>.
               </p>
@@ -152,9 +157,9 @@ export default function Registration() {
                 className="
                   relative group overflow-hidden
                   bg-[#F4D03F] text-[#4A0012]
-                  px-12 py-5 rounded-full font-bold text-lg
-                  shadow-[0_10px_40px_rgba(244,208,63,0.4)]
-                  hover:shadow-[0_10px_60px_rgba(244,208,63,0.6)]
+                  px-10 py-4 rounded-full font-bold text-base md:text-lg
+                  shadow-[0_8px_30px_rgba(244,208,63,0.3)]
+                  hover:shadow-[0_10px_40px_rgba(244,208,63,0.5)]
                   transition-all duration-300 transform hover:scale-105
                 "
               >
@@ -189,19 +194,19 @@ export default function Registration() {
             exit={{ opacity: 0, scale: 0.9 }}
             className="
               bg-white max-w-md w-full
-              rounded-[2rem] p-10 text-center
+              rounded-[2rem] p-8 md:p-10 text-center
               shadow-2xl border border-gray-100
             "
           >
-            <div className="w-20 h-20 bg-[#FFF9E8] rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-lg">
-              <span className="text-4xl">⏳</span>
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FFF9E8] rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-lg">
+              <span className="text-3xl md:text-4xl">⏳</span>
             </div>
             
-            <h2 className="text-3xl font-bold text-[#4A0012] mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#4A0012] mb-3">
               Opening Soon
             </h2>
 
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed">
               The official registration portal for IEEE INDICON 2026 is being finalized. Please stay tuned for updates!
             </p>
 
@@ -209,8 +214,8 @@ export default function Registration() {
               onClick={() => setShowPopup(false)}
               className="
                 w-full bg-[#4A0012] text-white
-                py-4 rounded-full font-semibold
-                hover:bg-[#650018] transition-colors
+                py-3.5 md:py-4 rounded-full font-semibold
+                hover:bg-[#650018] transition-colors text-sm md:text-base
               "
             >
               Got it, thanks!
