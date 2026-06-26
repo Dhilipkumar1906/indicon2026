@@ -26,8 +26,10 @@ export default function Committee() {
         { name: "Dr. S.M. Sameer", role: "R10 - Director-Elect\n(2025-2026)", image: "/committee/6.jpg" },
         { name: "Shri. Srikanth\nChandrasekaran", role: "Country Head-GIEEE,\nBangalore", image: "/committee/7.jpg" },
         { name: "Dr. Amit Kumar", role: "Chairman - Section and\nChapter Committee [R10]", image: "/committee/37.jpg" },
+        { name: "Manfred (Fred) Schindler", role: "Past IEEE VP Technical Activities", image: "/committee/9.webp" },
+
       ],
-      colSpan: "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+      colSpan: "sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl mx-auto",
     },
     {
       sectionName: "General Chair(s)",
