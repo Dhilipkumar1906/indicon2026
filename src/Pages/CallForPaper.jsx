@@ -85,8 +85,8 @@ export default function CallForPapers() {
             <div className="w-24 h-1 bg-[#F4D03F] mx-auto mt-4 rounded-full"></div>
           </div>
 
-          {/* Intro Paragraph & Best Paper Award - NEWLY ADDED SECTION */}
-          <div className="max-w-4xl mx-auto text-center mb-16 reveal-on-scroll" style={{ animationDelay: '0.15s' }}>
+          {/* Intro Paragraph & Best Paper Award */}
+          <div className="max-w-4xl mx-auto text-center mb-10 reveal-on-scroll" style={{ animationDelay: '0.15s' }}>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 text-justify md:text-center px-4">
               IEEE INDICON 2026 invites original, high-quality research papers from academicians, industry professionals, and researchers worldwide. The conference provides a premier platform to present and discuss the latest innovations, trends, and practical challenges encountered in the fields of engineering and technology.
             </p>
@@ -97,6 +97,19 @@ export default function CallForPapers() {
                 Track-wise Best Paper will be awarded!
                 <span className="text-3xl">🏆</span>
               </p>
+            </div>
+          </div>
+
+          {/* NEW SECTION: HYBRID MODE PRESENTATION ALERT */}
+          <div className="max-w-4xl mx-auto mb-16 reveal-on-scroll" style={{ animationDelay: '0.18s' }}>
+            <div className="bg-[#FFF9E8] border-l-4 border-[#C89B00] p-6 md:p-8 rounded-r-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6 border-y border-r border-[#F4D03F]/30">
+              <div className="text-4xl md:text-5xl drop-shadow-sm">🌍</div>
+              <div>
+                <h4 className="text-xl font-bold text-[#4A0012] mb-2 uppercase tracking-wide">Presentation Mode (Hybrid)</h4>
+                <p className="text-gray-700 text-[15.5px] leading-relaxed">
+                  IEEE INDICON 2026 will be conducted in a hybrid format. Please note that <strong className="text-[#4A0012]">virtual (online) presentations are exclusively reserved for foreign authors</strong>. All Indian delegates are required to attend and present their papers <strong className="text-red-700 underline decoration-red-300 underline-offset-4">in person</strong>.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -132,8 +145,6 @@ export default function CallForPapers() {
             </div>
           </div>
 
-
-        
 
           {/* SECTION 3: HOW TO SUBMIT */}
           <div 

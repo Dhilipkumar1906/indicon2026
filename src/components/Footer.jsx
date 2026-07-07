@@ -77,7 +77,7 @@ export default function Footer() {
               </p>
 
               <p>
-                💬 WhatsApp: +91 9487248689
+                💬 WhatsApp: 7502217554 / 9487248689
               </p>
 
               <div

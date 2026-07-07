@@ -69,7 +69,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-2 text-xl text-white">
-              +91 9487248689
+              7502217554 / 9487248689
             </p>
           </div>
 
