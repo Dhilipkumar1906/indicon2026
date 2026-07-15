@@ -7,6 +7,7 @@ export default function LogoStrip() {
     <div className="w-full px-4 mt-24 md:mt-28">
       <div
         className="
+          w-full
           max-w-[560px]
           mx-auto
 
@@ -16,8 +17,8 @@ export default function LogoStrip() {
           border border-[#D4AF37]/40
           rounded-2xl
 
-          px-3 md:px-5
-          py-2.5
+          px-4 md:px-6
+          py-3
 
           shadow-[0_8px_30px_rgba(212,175,55,0.2)]
         "
@@ -25,15 +26,14 @@ export default function LogoStrip() {
         <div
           className="
             flex
-            flex-nowrap
+            w-full
             items-center
-            justify-center
-
-            gap-3 md:gap-6
+            justify-between
+            gap-2 md:gap-6
           "
         >
           {/* Logo 1 */}
-          <div className="flex items-center justify-center h-12 md:h-16 w-24 md:w-32">
+          <div className="flex flex-1 items-center justify-center h-10 md:h-16">
             <img
               src={indc}
               alt="IEEE India Council"
@@ -41,11 +41,11 @@ export default function LogoStrip() {
             />
           </div>
 
-          {/* Divider */}
-          <div className="h-9 md:h-12 w-px bg-[#D4AF37]/40" />
+          {/* Divider (shrink-0 கொடுத்தா நசுங்காது) */}
+          <div className="h-8 md:h-12 w-px bg-[#D4AF37]/40 shrink-0" />
 
           {/* Logo 2 */}
-          <div className="flex items-center justify-center h-12 md:h-16 w-24 md:w-32">
+          <div className="flex flex-1 items-center justify-center h-10 md:h-16">
             <img
               src={mad}
               alt="IEEE Madras Section"
@@ -54,10 +54,10 @@ export default function LogoStrip() {
           </div>
 
           {/* Divider */}
-          <div className="h-9 md:h-12 w-px bg-[#D4AF37]/40" />
+          <div className="h-8 md:h-12 w-px bg-[#D4AF37]/40 shrink-0" />
 
           {/* Logo 3 */}
-          <div className="flex items-center justify-center h-12 md:h-16 w-24 md:w-32">
+          <div className="flex flex-1 items-center justify-center h-10 md:h-16">
             <img
               src={sairam}
               alt="Sri Sairam Engineering College"
