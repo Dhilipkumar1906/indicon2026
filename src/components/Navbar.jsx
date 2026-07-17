@@ -77,7 +77,7 @@ export default function Navbar() {
     { name: "Call For Papers", id: "call-for-papers", isPage: true },
     { name: "Guidelines & Policies", id: "guidelines", isPage: true },
     { name: "Committee", id: "committee", isPage: true },
-    { name: "Venue", id: "venue", isPage: true },
+    { name: "Venue", id: "venue", isPage: false },
   ];
 
   return (
