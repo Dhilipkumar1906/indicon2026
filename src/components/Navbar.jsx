@@ -25,8 +25,31 @@ export default function Navbar() {
 
   // Handle cross-page scrolling
   const scrollToSection = (id) => {
-    setMenuOpen(false);
+  setMenuOpen(false);
 
+  if (location.pathname !== "/") {
+    navigate("/");
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
+  } else {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
+    // மத்த ஹோம் பேஜ் செக்‌ஷன்ஸ் (Home, About, Schedule)
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -43,19 +66,18 @@ export default function Navbar() {
     }
   };
 
-  // Added 'Committee' to the navigation items
+  // Updated Navigation items
   const navItems = [
     { name: "Home", id: "home", isPage: false },
     { name: "About", id: "about", isPage: false },
     { name: "Tracks", id: "tracks", isPage: false },
     { name: "Speakers", id: "speakers", isPage: false },
     { name: "Schedule", id: "dates", isPage: false },
+    { name: "Payment Details", id: "registration", isPage: true},
     { name: "Call For Papers", id: "call-for-papers", isPage: true },
     { name: "Guidelines & Policies", id: "guidelines", isPage: true },
-        { name: "Committee", id: "committee", isPage: true }, // Put committee here
-
-    { name: "Venue", id: "venue", isPage: false },
-    { name: "Contact", id: "contact", isPage: false },
+    { name: "Committee", id: "committee", isPage: true },
+    { name: "Venue", id: "venue", isPage: true },
   ];
 
   return (
@@ -102,8 +124,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          {/* Adjusted gap and text sizes so 10 items fit perfectly on laptop screens */}
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
             {navItems.map((item) =>
               item.isPage ? (
                 <Link
@@ -112,7 +133,7 @@ export default function Navbar() {
                   onClick={() => window.scrollTo(0, 0)}
                   className="
                     relative
-                    text-[13px] xl:text-[14px] 2xl:text-[15px]
+                    text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px]
                     font-medium
                     tracking-wide
                     whitespace-nowrap
@@ -130,7 +151,7 @@ export default function Navbar() {
                   onClick={() => scrollToSection(item.id)}
                   className="
                     relative
-                    text-[13px] xl:text-[14px] 2xl:text-[15px]
+                    text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px]
                     font-medium
                     tracking-wide
                     whitespace-nowrap
@@ -146,15 +167,12 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* Desktop Register Button */}
+          {/* Desktop CONTACT US Button */}
           <button
-            onClick={() => {
-              window.scrollTo(0, 0);
-              navigate("/registration");
-            }}
+            onClick={() => scrollToSection("contact")}
             className={`
               hidden lg:flex
-              ml-3 xl:ml-5
+              ml-2 xl:ml-4
               items-center
               rounded-full
               bg-[#F4D03F]
@@ -170,7 +188,7 @@ export default function Navbar() {
               ${scrolled ? "px-4 py-2" : "px-5 py-2.5 xl:py-3"}
             `}
           >
-            {scrolled ? "REGISTER" : "REGISTER NOW"}
+            {scrolled ? "CONTACT US" : "CONTACT US"}
           </button>
 
           {/* Mobile Menu Button */}
@@ -265,12 +283,9 @@ export default function Navbar() {
               )
             )}
 
+            {/* Mobile CONTACT US Button */}
             <button
-              onClick={() => {
-                setMenuOpen(false);
-                window.scrollTo(0, 0);
-                navigate("/registration");
-              }}
+              onClick={() => scrollToSection("contact")}
               className="
                 w-full
                 bg-[#F4D03F]
@@ -279,7 +294,7 @@ export default function Navbar() {
                 py-4
               "
             >
-              REGISTER NOW
+              CONTACT US
             </button>
           </div>
         )}
