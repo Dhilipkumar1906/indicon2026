@@ -346,10 +346,8 @@ const [agreed, setAgreed] = useState(false);
             <li>• Submitted manuscripts undergo mandatory plagiarism screening per IEEE guidelines. Papers violating ethics will be desk-rejected and the authors’ parent organizations informed.</li>
             <li>• All submitted manuscripts will be reviewed by the Program Committee.
 </li>
-            <li> -Submitted papers should NOT list any author names, affiliations or any other personally identifiable information.
-</li>
-            <li> -As an author, you should not identify yourself or your organization in the paper, either explicitly or by implication (e.g., through the references or acknowledgments). References to your own work should be in the third-person.
-</li>
+            
+            
             <li> -Submissions will be judged on correctness, originality, technical strength, significance, potential impact, quality of presentation, and interest and relevance to the conference scope.
 </li>
             <li>• The author list and order at the time of submission is considered final – no co-authors can be added or removed or re-ordered after the submission deadline or upon acceptance (no exceptions).
