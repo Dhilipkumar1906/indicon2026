@@ -303,7 +303,7 @@ const [agreed, setAgreed] = useState(false);
 
             {[
               "Plagiarism Screening",
-              "Double-Blind Review",
+              "Editorial Screening",
               "Technical Evaluation",
               "Acceptance Decision",
               "Camera Ready",
@@ -344,7 +344,7 @@ const [agreed, setAgreed] = useState(false);
 
           <ul className="space-y-4 text-gray-700 leading-relaxed">
             <li>• Submitted manuscripts undergo mandatory plagiarism screening per IEEE guidelines. Papers violating ethics will be desk-rejected and the authors’ parent organizations informed.</li>
-            <li>• All submitted manuscripts will be reviewed by the Program Committee under a double-blind review process
+            <li>• All submitted manuscripts will be reviewed by the Program Committee.
 </li>
             <li> -Submitted papers should NOT list any author names, affiliations or any other personally identifiable information.
 </li>
