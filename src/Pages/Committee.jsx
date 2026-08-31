@@ -70,7 +70,7 @@ export default function Committee() {
       members: [
         { name: "Dr. V. Nagarajan", role: "Professor/Electronics Pondicherry University", image: "/committee/19.jpg" },
         { name: "Dr. R. Praveen", role: "Assistant Professor/CSE-NITPY", image: "/committee/20.jpg" },
-        {name: "Dr. Sathishkumar P", role: "Assistant Professor/MECH-NITPY", image: "/committee/sathish.jpg"},
+        {name: "Dr. Sathishkumar P", role: "Assistant Professor/MECH-NITPY", image: "/committee/sathish1.jpg"},
       ],
       colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
     },
