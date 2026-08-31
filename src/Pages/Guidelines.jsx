@@ -123,17 +123,15 @@ const [agreed, setAgreed] = useState(false);
               </li>
 
               <li>
-                • Papers should be between four and six pages,
+                • Papers should be between four and eight pages,
                 including references and figures.
               </li>
 
               <li>
-                • Literature-review-only papers are not accepted, and any submission exceeding six pages will be rejected. 
+                • Literature-review-only papers are not accepted, and any submission exceeding eight pages will be rejected. 
               </li>
 
-              <li>
-                • Submitted papers must NOT list any author names, affiliations, or other personally identifiable information, and must not include page numbers. 
-              </li>
+              
               
               <li>
                 • Detailed format information is available on the IEEE website <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank"
