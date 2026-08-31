@@ -270,7 +270,7 @@ const [agreed, setAgreed] = useState(false);
 
           <ul className="space-y-4 text-gray-700 leading-relaxed">
             <li>• Submitted manuscripts must be structured as <b>technical papers</b>. They must represent original, unpublished research that is <b>NOT currently under review </b>for any other conference or journal.</li>
-            <li>• Manuscripts must be a maximum of <b>six pages</b>; single-spaced, double-column, using 10-point font on 8.5×11-inch pages (IEEE conference style), including figures, tables, and references.</li>
+            <li>• Manuscripts must be a maximum of <b>eight pages</b>; single-spaced, double-column, using 10-point font on 8.5×11-inch pages (IEEE conference style), including figures, tables, and references.</li>
             <li>• <b>The IEEE conference style templates</b> for MS Word and LaTeX, provided by IEEE eXpress Conference Publishing, are available for download. Papers not following the style guidelines may be rejected without review.</li>
             <li>• Electronic submissions must be a readable PDF file.</li>
             <li>• Submitted manuscripts undergo mandatory <b>plagiarism screening </b>per IEEE guidelines. Papers violating ethics will be desk-rejected and the authors’ parent organizations informed.</li>
@@ -441,7 +441,7 @@ const [agreed, setAgreed] = useState(false);
 </li>
             <li>• Prepare final manuscript STRICTLY according to IEEE template. Failing which, we will not submit your manuscript to Xplore. Template can be found here. Preferably, use US Letter. Manuscript Templates for Conference Proceedings: <a href="https://www.ieee.org/conferences/publishing/templates.html" className="text-blue-600 underline hover:text-blue-800">https://www.ieee.org/conferences/publishing/templates.html</a>.
 </li>
-            <li>• Length of manuscript should be maximum 6 pages
+            <li>• Length of manuscript should be maximum 8 pages
 </li>
             <li>• Format and verify your manuscript using IEEE PDF eXpress™ to generate IEEE Xplore®-compliant PDF. RESOURCES IEEE PDF eXpress: A freely available online tool designed to assist conference organizers and authors in complying with the IEEE PDF requirements <a href="https://www.ieee.org/conferences/publishing/templates.html" className="text-blue-600 underline hover:text-blue-800">https://www.ieee.org/conferences/publishing/pdfexpress.html</a>  (In case, you need conference id to use PDFXpress, please use this – #72446)
 </li>
