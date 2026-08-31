@@ -73,7 +73,7 @@ export default function Registration() {
               <h3 className="text-xl md:text-2xl font-bold text-[#4A0012] mb-6">Registration Guidelines</h3>
               <ul className="space-y-4 text-gray-700 list-disc pl-5 marker:text-[#C89B00] text-[15px] md:text-base">
                 <li><strong>Eligibility for IEEE Xplore:</strong> Only registered and presented papers will be considered for <strong>IEEE Xplore Digital Library</strong>.</li>
-                <li>Each full registration covers <strong>one (1) paper</strong> with a maximum of <strong>6 pages</strong>.</li>
+                <li>Each full registration covers <strong>one (1) paper</strong> with a maximum of <strong>8 pages</strong>.</li>
                 <li>A maximum of <strong>2 additional pages</strong> can be included with an overlength fee of <strong>₹1000 / $18</strong> per extra page.</li>
                 <li><strong>Registration fees are non-refundable</strong> under any circumstances.</li>
                 <li>Authors must retain a copy of the <strong>payment transaction ID or receipt</strong> for use during the registration process.</li>
