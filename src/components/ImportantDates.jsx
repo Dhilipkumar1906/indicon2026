@@ -6,6 +6,7 @@ const dates = [
   {
     date: "31 August 2026",
     title: "Submission Deadline",
+    isHardDeadline: true, // இது புதுசா ஆட் பண்ணியிருக்கேன்
   },
   {
     date: "02 November 2026",
@@ -72,10 +73,8 @@ export default function ImportantDates() {
                   shadow-lg
                   border
                   border-[#FFD700]/20
-
                   hover:-translate-y-3
                   hover:shadow-2xl
-
                   transition-all
                   duration-500
                   "
@@ -87,6 +86,13 @@ export default function ImportantDates() {
                   <p className="mt-3 text-[#4A0012] font-semibold">
                     {item.title}
                   </p>
+                  
+                  {/* Hard Deadline Condition */}
+                  {item.isHardDeadline && (
+                    <span className="block text-red-600 font-extrabold text-sm mt-1 animate-pulse">
+                      (Hard Deadline)
+                    </span>
+                  )}
                 </div>
 
               </div>
