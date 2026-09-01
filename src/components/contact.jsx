@@ -58,7 +58,7 @@ export default function Contact() {
             </p>
 
             <p className="mt-2 text-xl text-white">
-              ieeeindicon2026@gamil.com
+              ieeeindicon2026@gmail.com
             </p>
           </div>
 
