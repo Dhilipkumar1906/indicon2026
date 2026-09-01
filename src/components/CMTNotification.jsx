@@ -41,12 +41,12 @@ export default function CMTNotification() {
           {/* Inner Content Container */}
           <div className="p-6 flex items-start gap-5">
             
-            {/* Modern Icon with Glow & Tilt */}
+            {/* Lock Icon with Glow */}
             <div className="relative flex-shrink-0 mt-1">
-              <div className="absolute inset-0 bg-[#F4D03F] blur-md opacity-40 animate-pulse rounded-full"></div>
+              <div className="absolute inset-0 bg-red-500 blur-md opacity-30 animate-pulse rounded-full"></div>
               <div className="relative w-12 h-12 bg-gradient-to-tr from-[#FFF9E8] to-[#F4D03F] rounded-xl flex items-center justify-center shadow-inner transform -rotate-3">
                 <svg className="w-6 h-6 text-[#4A0012]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                 </svg>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function CMTNotification() {
             <div className="flex-1">
               <div className="flex justify-between items-start">
                 <h4 className="font-extrabold text-[#F4D03F] text-[15px] uppercase tracking-widest mb-1">
-                  CMT Portal Live
+                  Submissions Closed
                 </h4>
                 {/* Close Button */}
                 <button
@@ -69,14 +69,14 @@ export default function CMTNotification() {
               </div>
               
               <p className="text-gray-200 text-sm leading-relaxed mb-5 pr-2">
-                Paper submission for IEEE INDICON 2026 is now officially open. Submit your manuscript via Microsoft CMT.
+                The paper submission window for IEEE INDICON 2026 is officially closed. Thank you to all the authors for your overwhelming response!
               </p>
               
               <a
-                href="/guidelines"
+                href="/#dates" 
                 className="inline-flex items-center justify-center gap-2 text-xs font-extrabold bg-white text-[#4A0012] px-5 py-2.5 rounded-lg hover:bg-[#F4D03F] transition-all shadow-md group tracking-wide"
               >
-                SUBMIT PAPER 
+                CHECK SCHEDULE 
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
