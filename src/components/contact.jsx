@@ -64,15 +64,15 @@ export default function Contact() {
 
           
           {/* WhatsApp */}
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <p className="text-[#FFD700] font-semibold uppercase tracking-wider">
               WhatsApp Support
             </p>
 
             <p className="mt-2 text-xl text-white">
-            //  7502217554 / 9487248689
+            7502217554 / 9487248689
             </p>
-          </div>
+          </div> */}
           
 
           {/* Important Badge */}
