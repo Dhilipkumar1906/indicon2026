@@ -62,7 +62,7 @@ export default function Contact() {
             </p>
           </div>
 
-          /*
+          
           {/* WhatsApp */}
           <div className="mt-8">
             <p className="text-[#FFD700] font-semibold uppercase tracking-wider">
@@ -70,10 +70,10 @@ export default function Contact() {
             </p>
 
             <p className="mt-2 text-xl text-white">
-              7502217554 / 9487248689
+            //  7502217554 / 9487248689
             </p>
           </div>
-          */
+          
 
           {/* Important Badge */}
           <div
