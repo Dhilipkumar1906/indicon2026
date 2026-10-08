@@ -220,7 +220,7 @@ export default function CallForPapers() {
               </a>
 
               <button
-                onClick={() => setShowCmtPopup(true)} // Changed from redirecting to opening the CMT popup
+                onClick={() => window.open("https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FINDICON2026","_blank")} // Changed from redirecting to opening the CMT popup
                 className="
                   border-2 border-[#F4D03F] text-[#F4D03F] font-bold px-8 py-4 rounded-full
                   hover:bg-[#F4D03F] hover:text-[#4A0012] hover:scale-105
