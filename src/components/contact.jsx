@@ -92,7 +92,6 @@ export default function Contact() {
               text-lg
             "
           >
-            <div className="flex items-center justify-center gap-2 text-gray-600">
   {/* <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
@@ -107,7 +106,7 @@ export default function Contact() {
     For queries, kindly reach us on WhatsApp.
   </p> 
   */}
-</div>
+
             
           </div>
 
