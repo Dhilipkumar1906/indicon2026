@@ -76,7 +76,7 @@ export default function Contact() {
           
 
           {/* Important Badge */}
-          <div
+          {/*<div
             className="
               mt-5
               inline-flex
@@ -108,7 +108,7 @@ export default function Contact() {
   */}
 
             
-          </div>
+          </div>*/}
 
           {/* Small Note */}
           <p className="mt-6 text-gray-400 text-sm">
