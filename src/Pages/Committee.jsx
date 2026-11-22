@@ -34,7 +34,7 @@ export default function Committee() {
     {
       sectionName: "General Chair(s)",
       members: [
-        { name: "Dr. P. Sakthivel", role: "Chairman-IEEE\nMadras Section", image: "/committee/10.jpg" },
+       // { name: "Dr. P. Sakthivel", role: "Chairman-IEEE\nMadras Section", image: "/committee/10.jpg" },
         { name: "Dr. J. Raja", role: "Principal-\nSri Sai Ram Engineering College", image: "/committee/11.jpg" },
         { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-\nIITKGP", image: "/committee/12.jpg" },
       ],
@@ -114,7 +114,7 @@ export default function Committee() {
       members: [
         { name: "Dr. T. Sree Sharmila", role: "Professor/IT-Anna Univ", image: "/committee/33.jpg" },
         { name: "Dr. J. Arputha\nVijayaselvi Jan", role: "Principal-Kings Engg College", image: "/committee/34.jpg" },
-        { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman –Industry MAS", image: "/committee/35.jpg" },
+       // { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman –Industry MAS", image: "/committee/35.jpg" },
       ],
       colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
     },
