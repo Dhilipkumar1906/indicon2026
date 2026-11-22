@@ -38,7 +38,7 @@ export default function Committee() {
         { name: "Dr. J. Raja", role: "Principal-\nSri Sai Ram Engineering College", image: "/committee/11.jpg" },
         { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-\nIITKGP", image: "/committee/12.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl mx-auto",
+      colSpan: "sm:grid-cols-2 lg:max-w-5xl mx-auto",
     },
     {
       sectionName: "Conference Chair",
@@ -116,7 +116,7 @@ export default function Committee() {
         { name: "Dr. J. Arputha\nVijayaselvi Jan", role: "Principal-Kings Engg College", image: "/committee/34.jpg" },
        // { name: "Dr. Ramalatha Marimuthu", role: "Vice-Chairman –Industry MAS", image: "/committee/35.jpg" },
       ],
-      colSpan: "sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto",
+      colSpan: "sm:grid-cols-2 max-w-5xl mx-auto",
     },
     {
       sectionName: "Operations & Logistics Committees",
