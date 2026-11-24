@@ -34,7 +34,7 @@ export default function Committee() {
     {
       sectionName: "General Chair(s)",
       members: [
-       // { name: "Dr. P. Sakthivel", role: "Chairman-IEEE\nMadras Section", image: "/committee/10.jpg" },
+        { name: "Dr. P. Sakthivel", role: "Chairman-IEEE\nMadras Section", image: "/committee/10.jpg" },
         { name: "Dr. J. Raja", role: "Principal-\nSri Sai Ram Engineering College", image: "/committee/11.jpg" },
         { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-\nIITKGP", image: "/committee/12.jpg" },
       ],
