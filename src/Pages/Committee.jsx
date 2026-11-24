@@ -34,7 +34,7 @@ export default function Committee() {
     {
       sectionName: "General Chair(s)",
       members: [
-        { name: "Dr. P. Sakthivel", role: "COE, Anna University, Chennai", image: "/committee/10.jpg" },
+        { name: "Dr. P. Sakthivel", role: "Professor/ECE & COE(i/c), Anna University, Chennai", image: "/committee/10.jpg" },
         { name: "Dr. J. Raja", role: "Principal-\nSri Sai Ram Engineering College", image: "/committee/11.jpg" },
         { name: "Prof. Dr. Sudip Misra", role: "Professor/CSE-\nIITKGP", image: "/committee/12.jpg" },
       ],
